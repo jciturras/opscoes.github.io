@@ -16,7 +16,7 @@ Asistente de la Línea de Interacciones Grupales e individuales
 
 <div style="text-align: justify">
 
-### Introducción    
+### Introducción     
 
 El presente documento tiene por objetivo realizar una introducción conceptual a los princios y prácticas de un modo de trabajo basado en Ciencia Abierta, lo cual a su vez busca ser un aporte para las y los investigadores de la Línea de Interacciones Grupales e Individuales del **[Centro de Conflicto y Cohesión Social](https://www.coes.cl/)**.
 
