@@ -141,25 +141,22 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 
 * **Estructura de proyectos:** Gestión centralizada de archivos, datos, código e información relevante para el proyecto.
 * **Acceso Controlado:** Manejo con respecto a qué partes del proyecto son públicas o privadas, lo que facilita colaborar y compartir con el equipo de trabajo o Comunidad científica en general.     
-* **Flujo de trabajo eficiente:** Control de versiones automatizado, identificadores para proyectos y materiales, pre-registro de estudios, generador de **pre-prints** e integración con otras plataformas de gestión de datos e información.
+* **Flujo de trabajo eficiente:** Control de versiones automatizado, identificadores para proyectos y materiales, pre-registro de estudios, generador de **pre-prints** (ver [SocArxiv](#socarvix)) e integración con otras plataformas de gestión de datos e información.
 
-* **Repositorio confiable:**     
+* **Repositorio confiable:** Los fondos de preservación del OSF garantizan un acceso libre que se estima en unos 50 años aproximadamente.
 
-
----
-
-- [Open Science Framework](https://osf.io/)
-  - [SocArxiv](https://osf.io/preprints/socarxiv)
-
-
-- [ORCID](https://orcid.org/)
 
 <div style="float:right; margin-left: 25px; margin-right: 0px;">
-  ![**Fig. 5**: SocArxiv -- Pre-prints](images\socarvix.jpg){width=20em}
+  ![**Fig. 5**: SocArxiv](images\socarvix.jpg){width=15em}
 </div>
 
+> **[SocArxiv](https://osf.io/preprints/socarxiv){#socarvix}** es un servidor de preimpresión (pre-prints) de acceso abierto para las ciencias sociales. Los artículos pueden ser enviados de forma gratuita; Todos los artículos publicados pueden ser descargados gratuitamente. Las discipinas asociadas son **Antropología, Arqueología, Economía, Lingüística, Ciencias políticas, Estudios religiosos, Sociología**
 
 
+
+#### Productividad académica
+
+[ORCID](https://orcid.org/)
 
 
 
