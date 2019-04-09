@@ -7,6 +7,7 @@ output:
     includes:
         in_header: academicons.html
 ---
+
 # Documento de Trabajo: Ciencia Abierta
 
 *Julio César Iturra Sanhueza*
@@ -86,13 +87,14 @@ En el diseño de proyectos de investigación en el marco de trabajo de la Cienci
 
 Un esfuerzo por modificar las prácticas de las y los investigadores, tiene como objetivo generar un vuelco en cómo se hace ciencia, cuestionar los incentivos que motivan a la comunidad científica a mostrar resultados estadísticamente significativos, en desmedro de los resultados "negativos" o que no confirman sus hipótesis o supuestos originales.   
 
-<br>
+<!-- <br> -->
+<!-- <br> -->
 
-#### Ciencias Sociales abiertas
+### Ciencias Sociales abiertas
 
 <div style="float:left; margin-left: 0px; margin-right: 25px;">
 
-![**Fig. 4**: Material suplementario en @Camerer2018 ](images\repli1.png){width=25em}
+![**Fig. 4**: Material suplementario en @Camerer2018](images\repli1.png){width=25em}
 
 </div>
 
