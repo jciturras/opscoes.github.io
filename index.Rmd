@@ -2,8 +2,5 @@
 title: "Bienvenidos a mi sitio"
 ---
 
-# Sitio Web de Julio...
+# Sitio Web de Julio Iturra Sanhueza
 
-* Hola
-* Qué tal?
-* Saludos

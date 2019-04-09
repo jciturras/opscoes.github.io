@@ -13,6 +13,14 @@ navbar:
     - text: "OSF"
       icon: ai-osf
       href: osf.html
+    - text: "Menu" 
+      menu:
+        - text: " "
+          icon: ai-researchgate
+          href: https://www.researchgate.net/profile/Julio_Iturra_Sanhueza
+        - text: "Open Science Framework"
+          href: https://osf.io/xn6mh/
+          icon: ai-osf
       
 output:
   html_document:
