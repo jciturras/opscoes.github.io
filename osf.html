@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>osf.utf8.md</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link rel="stylesheet" href="site_lib/academicons-1.8.6/css/academicons.css"/>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Julio César Iturra Sanhueza</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Inicio
+  </a>
+</li>
+<li>
+  <a href="about.html">Sobre</a>
+</li>
+<li>
+  <a href="https://github.com/jciturras">
+    <span class="fa fa-github"></span>
+     
+     
+  </a>
+</li>
+<li>
+  <a href="osf.html">
+    <span class="ai ai-osf"></span>
+     
+    OSF
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="documento-de-trabajo-ciencia-abierta" class="section level1">
+<h1>Documento de Trabajo: Ciencia Abierta</h1>
+<p><em>Julio César Iturra Sanhueza</em></p>
+<p>Asistente de la Línea de Interacciones Grupales e individuales</p>
+<hr />
+<div style="text-align: justify">
+<h3 id="introduccion">Introducción</h3>
+<p>El presente documento tiene por objetivo realizar una introducción conceptual a los principios y prácticas de un modo de trabajo basado en Ciencia Abierta, lo cual a su vez busca ser un aporte para las y los investigadores de la Línea de Interacciones Grupales e Individuales del <strong><a href="https://www.coes.cl/">Centro de Conflicto y Cohesión Social</a></strong>.</p>
+<p>La primera sección abordará los principios que orientan una práctica científica basada en la Ciencia Abierta, así también, las prácticas asociadas a una comunidad científica con miras a la producción de conocimiento que cumple con los principios de <em>Reproducibilidad</em>, <em>Apertura</em> y <em>Transparencia</em>. La segunda sección busca introducir al marco de trabajo que ofrece el <em><strong>Open Science Framework</strong></em>. Comunidad que ha facilitado el acceso libre y transparente a la investigación científica ya realizada, en curso o que su diseño se encuentra en elaboración.</p>
+<h3 id="reproducibilidad-apertura-y-transparencia"><em>Reproducibilidad, Apertura y Transparencia</em></h3>
+<div style="float:left;margin-left: 0px; margin-right: 30px;">
+<div class="figure">
+<img src="images/openscience1.png" alt="Fig. 1: Ciencia Abierta y sus partes" style="height:9em" />
+<p class="caption"><strong>Fig. 1</strong>: Ciencia Abierta y sus partes</p>
+</div>
+</div>
+<p>En el contexto de un trabajo colaborativo como parte del quehacer científico, podemos encontrar ejes orientadores o “principios” que dan forma a la manera en que es posible realizar investigación. Siguiendo a <span class="citation">Nosek et al. (2015)</span>, una práctica científica basada en la Ciencia Abierta se orienta en base a tres dimensiones o pilares fundamentales. Éstos son Reproducibilidad, Apertura y Transparencia.</p>
+<h4 id="reproducibilidad">Reproducibilidad</h4>
+<p>Cuando nos referimos a la idea de <strong>Reproducibilidad</strong> (<em>Reproducibility</em>), estamos hablando de cómo se vuelve factible que la evidencia producida pueda ser replicada por otros/as investigadores de la comunidad científica. En este sentido, el carácter reproducible de la investigación científica guarda relación con las distintas etapas a través de las cuales debe transitar el trabajo de las y los investigadores.</p>
+<p>Conforme a lo anterior, el carácter reproducible del trabajo científico requiere que las etapas de diseño, ejecución, análisis y reporte de resultados tengan presente que cada uno de estos procedimientos deben estar en conocimiento de otros/as miembros de la comunidad científica para garantizar la reproducibilidad de la investigación. De esta manera, se estaría cumpliendo con los estándares mínimos que se requieren para llevar adelante una agenda orientada a que los resultados de la investigación sean reproducibles. No obstante, para cumplir con lo mencionado, se requiere que la comunidad científica tenga acceso a la información, y es desde ahí donde la <strong>Apertura</strong> juega un rol fundamental.</p>
+<h4 id="apertura">Apertura</h4>
+<p>¿Podemos garantizar reproducibilidad cuando existen restricciones con respecto a las distintas etapas de la investigación? La respuesta a esta pregunta es <em>no</em>, y la alternativa para darle una salida es la <strong>Apertura</strong> (<em>Openness</em>) de los componentes y productos de la investigación. <span class="citation">Nosek et al. (2015)</span> sostienen que a lo largo del proceso científico, la apertura juega un rol fundamental en la medida de que sin la existencia de ésta sería imposible evaluar y reproducir los resultados. En una línea similar, <span class="citation">Camerer et al. (2018)</span> sugieren que el acceso abierto a los materiales de investigación permite a los miembros de una comunidad científica tomar postura con respecto a la evidencia producida por sus pares.</p>
+<div style="float:right; margin-left: 30px; margin-right: 0px;">
+<div class="figure">
+<img src="images/osf1.png" alt="Fig. 2: Open Science Framework" style="width:20em" />
+<p class="caption"><strong>Fig. 2</strong>: Open Science Framework</p>
+</div>
+</div>
+<p>Teniendo presente las particularidades de cada disciplina, existen puntos en común desde donde es factible llevar a cabo el principio de Apertura, estos son los estándares de <strong>Diseño de Estudio</strong>, <strong>Materiales de trabajo</strong>, <strong>Disponibilidad de datos</strong> y <strong>Análisis</strong> <span class="citation">(Nosek et al., 2015)</span>.</p>
+<ol style="list-style-type: lower-roman">
+<li><p>Los estándares de diseño incrementan la transparencia en torno al proceso de investigación y reduce la vaguedad o parcialidad en el reporte del diseño metodológico de un estudio.</p></li>
+<li><p>Estándares relacionados con los materiales de investigación motiva a los investigadores a proveer todos los elementos involucrados con el diseño metodológico.</p></li>
+<li><p>Estándares que incentiven a los autores/as a compartir sistemáticamente los datos producidos en el proceso de investigación, lo cual puede realizarse a través de distintas plataformas.</p></li>
+<li><p>Compartir la estrategia analítica, lo cual abarca diversas dimensiones del trabajo investigativo según cada disciplina o métodos empleados. No obstante, un buen ejemplo respecto a cómo es factible cumplir con este estándar, es poner a disposición el código empleado para el análisis estadístico a través de plataformas de acceso libre. Esto último será expuesto más en detalle en el apartado final.</p></li>
+</ol>
+<h4 id="transparencia">Transparencia</h4>
+<p>La Transparencia puede considerarse como un “objetivo transversal” de la Ciencia Abierta. Basado en los cuatro puntos señalados en el apartado anterior, poner a disposición de la comunidad científica todo el proceso investigativo permite obtener mayores grados de confianza en los resultados reportados, y de esta manera discernir entre aquellos que representan un aporte para las discusiones disciplinares y cuáles no.</p>
+<div style="float:left; margin-left: 0px; margin-right: 30px;">
+<caption>
+<strong>Tabla 1</strong>: Estándares para la Ciencia abierta
+</caption>
+<table>
+<thead>
+<tr class="header">
+<th>Open Science Standards</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Citations Standards</td>
+</tr>
+<tr class="even">
+<td>2. Data Transparency</td>
+</tr>
+<tr class="odd">
+<td>3. Analytic methods (code) transparency</td>
+</tr>
+<tr class="even">
+<td>3. Research materials transparency</td>
+</tr>
+<tr class="odd">
+<td>4. Design and analysis transparency</td>
+</tr>
+<tr class="even">
+<td>5. Preregistration of studies</td>
+</tr>
+<tr class="odd">
+<td>6. Preregistration of analysis plans</td>
+</tr>
+<tr class="even">
+<td>7. Replication</td>
+</tr>
+<tr class="odd">
+<td><em>Fuente</em>: <span class="citation">Nosek et al. (2015)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>En el diseño de proyectos de investigación en el marco de trabajo de la Ciencia Abierta, existen medidas como apunta a la reducción de sesgos sistemáticos u omisión de resultados considerados “poco relevantes” por los/as investigadores, tales como el <strong>pre-registro del plan de análisis</strong> <span class="citation">(Camerer et al., 2018; Nosek et al., 2015)</span>.</p>
+<p><span class="citation">Nosek et al. (2018)</span> sostienen que la utilidad de una práctica como el pre-registro del plan de análisis, ya sea de estudios observacionales u experimentales, permite distinguir entre la investigación exploratoria o “generadora de hipótesis” y la investigación confirmatoria o de “prueba de hipótesis”. En este sentido, motivar una práctica como es el pre-registro apunta a mejorar los estándares en términos de transparencia y credibilidad de la evidencia resultante de la investigación. El fin último de la transparencia es crear un marco de trabajo con mayor fluidez de la información, de modo tal que</p>
+<p>Un esfuerzo por modificar las prácticas de las y los investigadores, tiene como objetivo generar un vuelco en cómo se hace ciencia, cuestionar los incentivos que motivan a la comunidad científica a mostrar resultados estadísticamente significativos, en desmedro de los resultados “negativos” o que no confirman sus hipótesis o supuestos originales.</p>
+<!-- <br> -->
+<!-- <br> -->
+<h3 id="ciencias-sociales-abiertas">Ciencias Sociales abiertas</h3>
+<div style="float:left; margin-left: 0px; margin-right: 25px;">
+<div class="figure">
+<img src="images/repli1.png" alt="Fig. 4: Material suplementario en Camerer et al. (2018)" style="width:25em" />
+<p class="caption"><strong>Fig. 4</strong>: Material suplementario en <span class="citation">Camerer et al. (2018)</span></p>
+</div>
+</div>
+<p>Estudios como el de <span class="citation">Camerer et al. (2018)</span> han demostrado la importancia del pre-registro en las Ciencias Sociales, particularmente en el diseño de experimentos en psicología y economía. En sí misma, esta investigación es un buen ejemplo respecto a cómo se puede conducir un estudio con miras a la reproducibilidad. La Figura 4 muestra cómo es posible emplear repositorios online como el <a href="https://osf.io/"><em>Open Science Framework</em></a> para poner a disposición el plan de análisis, rutinas de código y datos empleados. Así,</p>
+<ol style="list-style-type: lower-alpha">
+<li>Estudios experimentales</li>
+<li>Estudios cuantitativos de corte transversal</li>
+<li>Estudios cualitativos</li>
+</ol>
+<ul>
+<li>Publicación
+<ul>
+<li>Plataformas de acceso libre</li>
+</ul></li>
+</ul>
+<div style="float:center; margin-left: 25px; margin-right: 0px;">
+<div class="figure">
+<img src="images/socarvix.jpg" alt="Fig. 3: SocArxiv – Pre-prints" style="width:20em" />
+<p class="caption"><strong>Fig. 3</strong>: SocArxiv – Pre-prints</p>
+</div>
+</div>
+<h3 id="caracteristicas-del-segundo-periodo-del-centro">Características del segundo periodo del Centro</h3>
+<p>Para el segundo periodo del Centro, se ha puesto como objetivo el desarrollar e impulsar una agenda basada en los principio del la Ciencia Abierta, desde donde se anime a las o los investigadores del Centro a implementar nuevas prácticas relacionadas con la reproducibilidad, apertura y transparencia de los resultados de su trabajo científico.</p>
+<p>Dentro de las cinco tareas para el nuevo periodo de COES, promover una agenda de Ciencia Abierta tiene la potencialidad de contribuir al fortalecimiento de las Redes de Colaboración y establecer un diálogo más fluido con investigadores/as de otras instituciones académicas del contexto nacional e internacional.</p>
+<ol class="example" style="list-style-type: decimal">
+<li>Fortalecer la Investigación Interdisciplinaria</li>
+<li>Análisis del Cambio Social.</li>
+<li><strong>Ciencia Abierta.</strong></li>
+<li>Investigación Aplicada.</li>
+<li>Redes de Colaboración.</li>
+</ol>
+<p>Las implementación de una agenda de estas características contribuirá de manera transversal a los objetivos de Centro, además de poner las herramientas a disposición de otras entidades académicas que manifiesten interés en desarrollar políticas institucionales basadas en los principios de la Ciencia Abierta.</p>
+<h4 id="propuesta-de-trabajo">Propuesta de Trabajo</h4>
+<p>En consonancia con el apartado anterior, este documento de busca contribuir a una agenda basada en los principio de la Ciencia Abierta para el Centro de Estudios de Conflicto y Cohesión Social. A continuación se se presentarán una propuesta de trabajo basada en el entorno de colaboración académica que ofrece el <a href="https://osf.io/"><em>Open Science Framework</em></a>.</p>
+<ul>
+<li><a href="https://cos.io/">Center for Open Science</a></li>
+<li><a href="https://osf.io/">Open Science Framework</a>
+<ul>
+<li><a href="https://osf.io/preprints/discover?subject=bepress%7CSocial%20and%20Behavioral%20Sciences">Pre-prints</a></li>
+</ul></li>
+<li><a href="https://orcid.org/">ORCID</a></li>
+</ul>
+<h1 id="ejemplo">Ejemplo</h1>
+<ul>
+<li>Open Science Framework (<a href="https://osf.io/xn6mh/">Iturra, 2018</a>)
+<ul>
+<li>Repositorio en <a href="https://github.com/jciturras/OSFjciturras">Github</a> del proyecto.</li>
+</ul></li>
+<li></li>
+</ul>
+</div>
+<div id="referencias" class="section level4 unnumbered">
+<h4>Referencias</h4>
+<div id="refs" class="references">
+<div id="ref-Camerer2018">
+<p>Camerer, C. F., Dreber, A., Holzmeister, F., Ho, T.-H., Huber, J., Johannesson, M., … Wu, H. (2018). Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. <em>Nature Human Behaviour</em>, <em>2</em>(9), 637–644. <a href="https://doi.org/10.1038/s41562-018-0399-z">https://doi.org/10.1038/s41562-018-0399-z</a></p>
+</div>
+<div id="ref-Nosek2015">
+<p>Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., … Yarkoni, T. (2015). Promoting an open research culture. <em>Science</em>, <em>348</em>(6242), 1422. <a href="https://doi.org/10.1126/science.aab2374">https://doi.org/10.1126/science.aab2374</a></p>
+</div>
+<div id="ref-Nosek2018">
+<p>Nosek, B. A., Ebersole, C. R., DeHaven, A. C., &amp; Mellor, D. T. (2018). The preregistration revolution. <em>Proceedings of the National Academy of Sciences</em>, <em>115</em>(11), 2600. <a href="https://doi.org/10.1073/pnas.1708274114">https://doi.org/10.1073/pnas.1708274114</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
