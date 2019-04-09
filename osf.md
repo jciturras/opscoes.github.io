@@ -1,6 +1,11 @@
 ---
 bibliography: ../../Dropbox/Bibtex/zlibrary.bib
 csl: ../../Dropbox/Bibtex/apa6.csl
+output:
+  html_document:
+    theme: yeti
+    includes:
+        in_header: academicons.html
 ---
 # Documento de Trabajo: Ciencia Abierta
 
@@ -91,7 +96,7 @@ Un esfuerzo por modificar las prácticas de las y los investigadores, tiene como
 
 </div>
 
-Estudios como el de @Camerer2018 han demostrado la importancia del pre-registro en las Ciencias Sociales, particularmente en el diseño de experimentos en psicología y economía. En sí misma, esta investigación es un buen ejemplo respecto a cómo se puede conducir un estudio con miras a la reproducibilidad. La Figura 4 muestra cómo es posible emplear repositorios online como el [*Open Science Framework*](https://osf.io/) para poner a disposición el plan de análisis, rutinas de código y datos empleados. Así, 
+Estudios como el de @Camerer2018 han demostrado la importancia del pre-registro en las Ciencias Sociales, particularmente en el diseño de experimentos en psicología y economía. En sí misma, esta investigación es un buen ejemplo respecto a cómo se puede conducir un estudio con miras a la reproducibilidad. La Figura 4 muestra cómo es posible emplear repositorios online como el [*Open Science Framework*](https://osf.io/) para poner a disposición el plan de análisis, rutinas de código y datos empleados. Así,
 
 
 
