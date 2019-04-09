@@ -8,7 +8,18 @@ output:
       theme: yeti
       includes:
           in_header: academicons.html  
+
+
 ---
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
 
 # Documento de Trabajo: Ciencia Abierta
 
@@ -156,30 +167,30 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 <br>
 <br>
 
+
+
+
+
 ### Gestion de un proyecto en Open Science Framework
 
 Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia para efectos del repositorio de ejemplo.
 
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#tesis"> Ejemplo  </button>
-  <div id="tesis" class="collapse">
+<div id="tesis" class="collapse">
 
 ![](images/dash3.png){width=150%}
 
+* Iturra, J. C. (2019, April 9). Estatus Social Subjetivo y Percepción de Meritocracia: El caso de Chile. Retrieved from osf.io/xn6mh
+</div>
 </center>
-> Iturra, J. C. (2019, April 9). Estatus Social Subjetivo y Percepción de Meritocracia: El caso de Chile. Retrieved from osf.io/xn6mh
-
-</div>
-</div>
 
 #### Generar de un Repositorio
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#uno"> Dashboard </button>
-  <div id="uno" class="collapse">
+<div id="uno" class="collapse">
 
-  ![Panel de Open Science Framework](images/dash1.png){width=150%}
-
-  </div>
+![Panel de Open Science Framework](images/dash1.png){width=150%}
 </div>
 </center>
 
@@ -187,14 +198,13 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#dos"> Crear proyecto </button>
-  <div id="dos" class="collapse">
+<div id="dos" class="collapse">
 
-  ![Creación de proyecto](images/dash2.png){width=150%}
-
-  </div>
+![Creación de proyecto](images/dash2.png){width=150%}
 </div>
-
 </center>
+
+
 ### Sitio Web
 
 
@@ -207,19 +217,6 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 > [ORCID](https://orcid.org/)
 
 
-
-
-#### Referencias
-
-
 </div>
 
-
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<body>
+#### Referencias
