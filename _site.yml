@@ -1,0 +1,26 @@
+name: "Hola"
+navbar:
+  title: "Julio César Iturra Sanhueza" 
+  left:
+    - text: "Inicio"
+      icon: fa-home
+      href: index.html
+    - text: "Sobre"
+      href: about.html
+    - text: " "
+      icon: fa-github
+      href: https://github.com/jciturras
+    - text: "OSF"
+      icon: ai-osf
+      href: osf.html
+      
+output:
+  html_document:
+    theme: yeti 
+    includes:
+        in_header: academicons.html
+
+ 
+
+      
+      
