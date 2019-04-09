@@ -1,7 +1,9 @@
 ---
-title: "La página web del Julio"
+title: "Bienvenidos a mi sitio"
 ---
 
-## Saludos 
-* Hola qué tal
+# Sitio Web de Julio...
+
+* Hola
+* Qué tal?
 * Saludos
