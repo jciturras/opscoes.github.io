@@ -1,9 +1,6 @@
 ---
 bibliography: ../../Dropbox/Bibtex/zlibrary.bib
 csl: ../../Dropbox/Bibtex/apa6.csl
-output: html_document
-export_on_save:
-  html: true
 ---
 # Documento de Trabajo: Ciencia Abierta
 
