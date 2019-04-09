@@ -83,6 +83,36 @@ La Transparencia puede considerarse como un "objetivo transversal" de la Ciencia
 En el diseño de proyectos de investigación en el marco de trabajo de la Ciencia Abierta, existen medidas como apunta a la reducción de sesgos sistemáticos u omisión de resultados considerados "poco relevantes" por los/as investigadores, tales como el **pre-registro del plan de análisis** [@Nosek2015; @Camerer2018].
 
 @Nosek2018 sostienen que la utilidad de una práctica como el pre-registro del plan de análisis, ya sea de estudios observacionales u experimentales, permite distinguir entre la investigación exploratoria o "generadora de hipótesis" y la investigación confirmatoria o de "prueba de hipótesis". En este sentido, motivar una práctica como es el pre-registro apunta a mejorar los estándares en términos de transparencia y credibilidad de la evidencia resultante de la investigación.     
+<<<<<<< HEAD
+=======
+
+@Nosek2018
+
+- no solo reportar resultados estadísticamente significativos, sino también los nulos o resultados fallidos.
+
+
+* Publicación
+  - Plataformas de acceso libre
+
+---
+
+- Diseño de investigación
+- Materiales de investigación / registro de plan de análisis  
+- Apertura de Datos
+- De conocimiento
+- Que la investigación sea reproducible.
+- Resultados y materiales de investigación de acceso libre.
+- Garantizar
+
+
+
+#### Ciencias Sociales
+
+a. Estudios experimentales
+b. Estudios cuantitativos de corte transversal
+c. Estudios cualitativos
+
+>>>>>>> cefd8addf309152bb6c30c49bdb75f8d7464a3c5
 
 ### Características del segundo periodo del Centro
 
