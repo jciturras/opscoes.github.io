@@ -171,12 +171,14 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 
 ### Gestión de un proyecto en Open Science Framework
 
-Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia para efectos del repositorio de ejemplo.
+Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de la **Encuesta Longitudinal Social de Chile** [ELSOC](http://www.elsoc.cl/).
+
+
 
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#tesis"> Ejemplo  </button>
 <div id="tesis" class="collapse">
-
+<br>
 ![](images/dash3.png){width=150%}
 
 > Iturra, J. C. (2019, April 9). Estatus Social Subjetivo y Percepción de Meritocracia: El caso de Chile. Retrieved from osf.io/xn6mh
@@ -184,11 +186,11 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 </div>
 </center>
 
-#### Generar de un Repositorio
+#### Generar un proyecto
 <center>
-<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#uno"> Dashboard </button>
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#uno"> Dashboard en OSF </button>
 <div id="uno" class="collapse">
-
+<br>
 ![Panel de Open Science Framework](images/dash1.png){width=150%}
 </div>
 </center>
@@ -198,7 +200,7 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#dos"> Crear proyecto </button>
 <div id="dos" class="collapse">
-
+<br>
 ![Creación de proyecto](images/dash2.1.png){width=150%}
 
 [Ver aquí](https://osf.io/faszq/)
@@ -208,11 +210,11 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 
 #### Secciones de un proyecto
 
-1. **Wiki**
-2. **Files**
-3. **Citations**
-4. **Components**
-5. **Tags**
+1. **Wiki**: Permite agregar información importante, enlaces o imágenes que faciliten la descripción su proyecto.
+2. **Archivos (_Files_)**: Permite elegir en un proveedor de almacenamiento o también es posible arrastrar y soltar para cargar sus archivos.
+3. **Citas (_Citations_)**: Generador de referencias bibliográficas en distintos formatos.
+4. **Componentes (_Components_)**: Los componentes son subproyectos debajo del proyecto de nivel superior. Los componentes ayudan a organizar su investigación y crear una jerarquía dentro de su proyecto principal. En el  [sitio web](http://help.osf.io/m/projects/l/481998-create-components) del OSF es posible encontrar más detalles al respecto.
+5. **Etiquetas (_Tags_)**: Etiquetas para vincular el actual proyecto con otros que declaren tópicos de investigación similares. Son análogos a las palabras clave (Keywords) en los artículos académicos.
 
 ![](images/osf-anim.gif)
 
