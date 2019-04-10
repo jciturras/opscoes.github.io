@@ -12,7 +12,14 @@ output:
 
 ---
 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
 
 # Documento de Trabajo: Ciencia Abierta
 
@@ -162,9 +169,7 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 
 
 
-
-
-### Gestion de un proyecto en Open Science Framework
+### Gestión de un proyecto en Open Science Framework
 
 Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia para efectos del repositorio de ejemplo.
 
@@ -174,7 +179,8 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 
 ![](images/dash3.png){width=150%}
 
-* Iturra, J. C. (2019, April 9). Estatus Social Subjetivo y Percepción de Meritocracia: El caso de Chile. Retrieved from osf.io/xn6mh
+> Iturra, J. C. (2019, April 9). Estatus Social Subjetivo y Percepción de Meritocracia: El caso de Chile. Retrieved from osf.io/xn6mh
+
 </div>
 </center>
 
@@ -193,10 +199,22 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#dos"> Crear proyecto </button>
 <div id="dos" class="collapse">
 
-![Creación de proyecto](images/dash2.png){width=150%}
+![Creación de proyecto](images/dash2.1.png){width=150%}
+
+[Ver aquí](https://osf.io/faszq/)
 </div>
 </center>
 
+
+#### Secciones de un proyecto
+
+1. **Wiki**
+2. **Files**
+3. **Citations**
+4. **Components**
+5. **Tags**
+
+![](images/osf-anim.gif)
 
 ### Sitio Web
 
