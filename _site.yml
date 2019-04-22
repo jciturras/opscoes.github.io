@@ -1,6 +1,6 @@
 name: "Hola"
 navbar:
-  title: "Julio César Iturra Sanhueza" 
+  title: "Centro de Estudios de Conflicto y Cohesión Social" 
   left:
     - text: "Inicio"
       icon: fa-home

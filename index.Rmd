@@ -1,6 +1,6 @@
 ---
-title: "Bienvenidos a mi sitio"
+title: "Bienvenidos"
 ---
 
-# Sitio Web de Julio Iturra Sanhueza
+# Ciencia Abierta en COES  
 
