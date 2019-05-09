@@ -13,6 +13,8 @@ navbar:
     - text: "OSF"
       icon: ai-osf
       href: osf.html
+    - text: "Dataverse"
+      href: dataverse_elsoc.html  
     - text: "Menu" 
       menu:
         - text: " "
