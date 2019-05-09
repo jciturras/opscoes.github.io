@@ -5,22 +5,11 @@ export_on_save:
   html: true
 output:
   html_document:
-      theme: yeti
-      includes:
-          in_header: academicons.html  
-
-
+    toc: yes
+    toc_float: yes
+    includes:
+        in_header: academicons.html      
 ---
-
-<!-- <html> -->
-<!-- <head> -->
-<!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-<!-- </head> -->
-<!-- <body> -->
-
 # Documento de Trabajo: Ciencia Abierta
 
 <div style="text-align: right">
@@ -122,6 +111,8 @@ La Figura 4 muestra cómo es posible emplear plataformas integradas como el [*Op
 
 ### Características del segundo periodo del Centro
 
+---
+
 Para el segundo periodo del Centro, se ha puesto como objetivo el desarrollar e impulsar una agenda basada en los principio del la Ciencia Abierta, desde donde se anime a las o los investigadores del Centro a implementar nuevas prácticas relacionadas con la reproducibilidad, apertura y transparencia de los resultados de su trabajo científico.         
 
 Dentro de las cinco tareas para el nuevo periodo de COES, promover una agenda de Ciencia Abierta tiene la potencialidad de contribuir al fortalecimiento de las Redes de Colaboración y establecer un diálogo más fluido con investigadores/as de otras instituciones académicas del contexto nacional e internacional.
@@ -171,9 +162,7 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 
 ### Gestión de un proyecto en Open Science Framework
 
-Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de la **Encuesta Longitudinal Social de Chile** [ELSOC](http://www.elsoc.cl/).
-
-
+Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de [ELSOC](http://www.elsoc.cl/) [@ELSOC2016] .
 
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#tesis"> Ejemplo  </button>
@@ -216,18 +205,71 @@ Este apartado está destinado a ilustrar las potencialidades del OSF como reposi
 4. **Componentes (_Components_)**: Los componentes son subproyectos debajo del proyecto de nivel superior. Los componentes ayudan a organizar su investigación y crear una jerarquía dentro de su proyecto principal. En el  [sitio web](http://help.osf.io/m/projects/l/481998-create-components) del OSF es posible encontrar más detalles al respecto.
 5. **Etiquetas (_Tags_)**: Etiquetas para vincular el actual proyecto con otros que declaren tópicos de investigación similares. Son análogos a las palabras clave (Keywords) en los artículos académicos.
 
-![](images/osf-anim.gif)
+<center>
+![**Fig. 6**: Creación de componente en proyecto](images/osf-anim.gif)
+
+</center>
+#### Gestión y uso de Add-ons
+
+Dentro de un proyecto, es posible emplear los **Add-ons**. Estos permiten sincronizar tus proyectos con servicios externos que ayudan a mantener la conectividad y la organización. Esta función se subdivide en dos grupos: _Citations_ y _Storage_.
+
+En _**Citations**_ es posible vincular usuarios de gestores de referencia como **Mendeley** o **Zotero**, lo cual permite mantener sincronizado nuestro proyecto con la librería empleada en el gestor de referencia.
+
+En  _**Storage**_ encontramos diversas opciones para vincular nuestro proyecto con unidades de almacenamiento o repositorios externos. Por un lado, de los servicios tipo *Cloud* es factible vincular el proyecto con cuentas de **Dropbox**, **Google Drive**, **OneDrive**, entre otros; de modo tal que el flujo de información entre el OSF y la cuenta asociada permita una actualización permanente.    
+
+Por otro lado, tenemos repositorios como **Dataverse Project** o **GitHub**, entre otros, los cuales ofrecen la utilidad de centralizar los archivos, así como también mantener un control de versiones y un flujo de trabajo cerrado (o no) para un equipo de colaboradores.
+
+<div style="float:right; margin-left: 20px; margin-right: 0px;">
+<caption>**Tabla 2**: Componentes de fuente de datos en Dataverse </caption>
+| Component                                               |
+|---------------------------------------------------------|
+| Author name(s)                                          |
+| Year (date published in Dataverse)                      |
+| Title                                                   |
+| Global persistent identifier: DOI or Handle             |
+| Publisher (repository that published the dataset)       |
+| Version number                                          |
+| Universal numerical fingerprint (UNF): for tabular data |
+</div>
+
+
+
+El [Dataverse Project](https://dataverse.org/) ofrece un **repositorio de datos abierto** y gratuito para la comunidad científica, el cual permite mantener un flujo de información constante entre Investigadores/as, Revistas, Instituciones y Desarrolladores. Al incrementar la visibilidad de las fuentes de datos al utilizar Dataverse, investigadores/as pueden obtener mayor reconocimiento por parte de la comunidad científica, así también un medio a través del cual se puede obtener un identificador único que permite citar adecuadamente la base de datos.
+
+<div style="float:left; margin-left: 0px; margin-right: 20px;">
+  ![**Fig. 7**: ELSOC en Dataverse](images/dataverseelsoc.png){width=18em}
+</div>
+
+Desde el año 2018, el Centro de Estudios de Conflicto y Cohesión Social ha depositado dos bases de datos en [Dataverse](https://dataverse.harvard.edu/dataverse/coes_survey?q=&types=datasets&sort=dateSort&order=desc&page=1); la **Encuesta sobre Conflicto y Cohesion Social en Chile (2014)** [@ENACOES2014] y la primera ola del **Estudio Longitudinal Social de Chile (2016)** [@ELSOC2016]. Ambas bases de datos se encuentran disponibles para libre descarga y son citables a través de un **DOI**. La Tabla 2 ilustra los siete componentes principales de una referencia para fuente de datos en Dataverse.
+
+<br>
+
+<div style="float:right; margin-left: 20px; margin-right: 0px;">
+  ![**Fig. 8**: Github ](images/github.png){width=9em}
+</div>
+
+En segunda instancia, el OSF permite vincular un proyecto con un repositorio en GitHub. En principio, [GitHub](https://github.com/) está orientado a almacenar de proyectos a través del control de versiones basados en [Git ](https://es.wikipedia.org/wiki/Git) [^3]. Dentro de los posibles usos que se le pueden dar a GitHub, el principal ha sido el almacenamiento de código por parte de desarrolladores y programadores.
+
+Desde el punto de vista de la apertura y la colaboración en Ciencias Sociales, el control de versiones basado en Git ofrece la oportunidad de guardar componentes específicos de un proyecto, tales como el código de análisis y documentos en **texto plano** [^4] .
+
+
+---
+
+<!-- * Colaboración con GitHub y vínculo con OSF [aquí]() (En desarrollo)    -->
+
+[^3]: _Git_ es un sistema de control de versiones distribuido de código abierto y gratuito, diseñado para manejar todo, desde proyectos pequeños hasta proyectos muy grandes, con rapidez y eficiencia.
+
+[^4]: Para una introducción a la redacción de documentos en ``texto plano`` revisar  _"The Plain Person's Guide"_ de Kieran Healy. [ver](https://kieranhealy.org/files/papers/plain-person-text.pdf)
+
+### Identificación
+
+> [ORCID](https://orcid.org/)
 
 ### Sitio Web
 
 
-- Sitio Web en [Github](https://jciturras.github.io/opscoes.github.io/) del proyecto.
+- Sitio Web en [GitHub pages](https://jciturras.github.io/opscoes.github.io/) del proyecto.
 
-
-
-### Productividad académica
-
-> [ORCID](https://orcid.org/)
 
 
 </div>

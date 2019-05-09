@@ -21,12 +21,10 @@ navbar:
         - text: "Open Science Framework"
           href: https://osf.io/xn6mh/
           icon: ai-osf
-      
 output:
   html_document:
-    theme: yeti 
     includes:
-        in_header: academicons.html
+        in_header: academicons.html  
 
  
 

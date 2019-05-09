@@ -15,10 +15,13 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -106,34 +109,34 @@ button.code-folding-btn:focus {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 45px;
+  padding-top: 51px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 
 .section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 </style>
 
@@ -168,6 +171,101 @@ $(document).ready(function () {
 <!-- code folding -->
 
 
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -247,14 +345,6 @@ $(document).ready(function () {
 </div>
 
 
-<!-- <html> -->
-<!-- <head> -->
-<!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-<!-- </head> -->
-<!-- <body> -->
 <div id="documento-de-trabajo-ciencia-abierta" class="section level1">
 <h1>Documento de Trabajo: Ciencia Abierta</h1>
 <div style="text-align: right">
@@ -349,6 +439,7 @@ $(document).ready(function () {
 <p>Estudios como el de <span class="citation">Camerer et al. (2018)</span> han demostrado la importancia del pre-registro en las Ciencias Sociales, particularmente en el diseño de experimentos en Psicología y Economía. En sí misma, esta investigación es un buen ejemplo respecto a cómo se puede conducir un estudio con miras a la reproducibilidad.</p>
 <p>La Figura 4 muestra cómo es posible emplear plataformas integradas como el <a href="https://osf.io/"><em>Open Science Framework</em></a> que permiten poner a disposición el plan de análisis, rutinas de código y bases de datos. Si bien el trabajo de <span class="citation">Camerer et al. (2018)</span> está orientado a la reproducibilidad de estudios experimentales, los mismos estándares pueden ser empleados en estudios cuantitativos de corte transversal o longitudinal. Para el último caso, el acceso abierto a las rutinas de código de análisis estadístico, y a las bases de datos, representan un estándar mínimo pueden seguir estudios de estas características.</p>
 <h3 id="caracteristicas-del-segundo-periodo-del-centro">Características del segundo periodo del Centro</h3>
+<hr />
 <p>Para el segundo periodo del Centro, se ha puesto como objetivo el desarrollar e impulsar una agenda basada en los principio del la Ciencia Abierta, desde donde se anime a las o los investigadores del Centro a implementar nuevas prácticas relacionadas con la reproducibilidad, apertura y transparencia de los resultados de su trabajo científico.</p>
 <p>Dentro de las cinco tareas para el nuevo periodo de COES, promover una agenda de Ciencia Abierta tiene la potencialidad de contribuir al fortalecimiento de las Redes de Colaboración y establecer un diálogo más fluido con investigadores/as de otras instituciones académicas del contexto nacional e internacional.</p>
 <ol class="example" style="list-style-type: decimal">
@@ -387,7 +478,7 @@ $(document).ready(function () {
 </blockquote>
 <p><br> <br></p>
 <h3 id="gestion-de-un-proyecto-en-open-science-framework">Gestión de un proyecto en Open Science Framework</h3>
-<p>Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de la <strong>Encuesta Longitudinal Social de Chile</strong> <a href="http://www.elsoc.cl/">ELSOC</a>.</p>
+<p>Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de <a href="http://www.elsoc.cl/">ELSOC</a> <span class="citation">(ELSOC Survey Team, 2016)</span> .</p>
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#tesis">
 Ejemplo
@@ -426,21 +517,91 @@ Crear proyecto
 <li><strong>Componentes (<em>Components</em>)</strong>: Los componentes son subproyectos debajo del proyecto de nivel superior. Los componentes ayudan a organizar su investigación y crear una jerarquía dentro de su proyecto principal. En el <a href="http://help.osf.io/m/projects/l/481998-create-components">sitio web</a> del OSF es posible encontrar más detalles al respecto.</li>
 <li><strong>Etiquetas (<em>Tags</em>)</strong>: Etiquetas para vincular el actual proyecto con otros que declaren tópicos de investigación similares. Son análogos a las palabras clave (Keywords) en los artículos académicos.</li>
 </ol>
-<p><img src="images/osf-anim.gif" /></p>
-<h3 id="sitio-web">Sitio Web</h3>
-<ul>
-<li>Sitio Web en <a href="https://jciturras.github.io/opscoes.github.io/">Github</a> del proyecto.</li>
-</ul>
-<h3 id="productividad-academica">Productividad académica</h3>
+<center>
+<div class="figure">
+<img src="images/osf-anim.gif" alt="Fig. 6: Creación de componente en proyecto" />
+<p class="caption"><strong>Fig. 6</strong>: Creación de componente en proyecto</p>
+</div>
+</center>
+<h4 id="gestion-y-uso-de-add-ons">Gestión y uso de Add-ons</h4>
+<p>Dentro de un proyecto, es posible emplear los <strong>Add-ons</strong>. Estos permiten sincronizar tus proyectos con servicios externos que ayudan a mantener la conectividad y la organización. Esta función se subdivide en dos grupos: <em>Citations</em> y <em>Storage</em>.</p>
+<p>En <em><strong>Citations</strong></em> es posible vincular usuarios de gestores de referencia como <strong>Mendeley</strong> o <strong>Zotero</strong>, lo cual permite mantener sincronizado nuestro proyecto con la librería empleada en el gestor de referencia.</p>
+<p>En <em><strong>Storage</strong></em> encontramos diversas opciones para vincular nuestro proyecto con unidades de almacenamiento o repositorios externos. Por un lado, de los servicios tipo <em>Cloud</em> es factible vincular el proyecto con cuentas de <strong>Dropbox</strong>, <strong>Google Drive</strong>, <strong>OneDrive</strong>, entre otros; de modo tal que el flujo de información entre el OSF y la cuenta asociada permita una actualización permanente.</p>
+<p>Por otro lado, tenemos repositorios como <strong>Dataverse Project</strong> o <strong>GitHub</strong>, entre otros, los cuales ofrecen la utilidad de centralizar los archivos, así como también mantener un control de versiones y un flujo de trabajo cerrado (o no) para un equipo de colaboradores.</p>
+<div style="float:right; margin-left: 20px; margin-right: 0px;">
+<caption>
+<strong>Tabla 2</strong>: Componentes de fuente de datos en Dataverse
+</caption>
+<table>
+<thead>
+<tr class="header">
+<th>Component</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Author name(s)</td>
+</tr>
+<tr class="even">
+<td>Year (date published in Dataverse)</td>
+</tr>
+<tr class="odd">
+<td>Title</td>
+</tr>
+<tr class="even">
+<td>Global persistent identifier: DOI or Handle</td>
+</tr>
+<tr class="odd">
+<td>Publisher (repository that published the dataset)</td>
+</tr>
+<tr class="even">
+<td>Version number</td>
+</tr>
+<tr class="odd">
+<td>Universal numerical fingerprint (UNF): for tabular data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>El <a href="https://dataverse.org/">Dataverse Project</a> ofrece un <strong>repositorio de datos abierto</strong> y gratuito para la comunidad científica, el cual permite mantener un flujo de información constante entre Investigadores/as, Revistas, Instituciones y Desarrolladores. Al incrementar la visibilidad de las fuentes de datos al utilizar Dataverse, investigadores/as pueden obtener mayor reconocimiento por parte de la comunidad científica, así también un medio a través del cual se puede obtener un identificador único que permite citar adecuadamente la base de datos.</p>
+<div style="float:left; margin-left: 0px; margin-right: 20px;">
+<div class="figure">
+<img src="images/dataverseelsoc.png" alt="Fig. 7: ELSOC en Dataverse" style="width:18em" />
+<p class="caption"><strong>Fig. 7</strong>: ELSOC en Dataverse</p>
+</div>
+</div>
+<p>Desde el año 2018, el Centro de Estudios de Conflicto y Cohesión Social ha depositado dos bases de datos en <a href="https://dataverse.harvard.edu/dataverse/coes_survey?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=1">Dataverse</a>; la <strong>Encuesta sobre Conflicto y Cohesion Social en Chile (2014)</strong> <span class="citation">(COES-ELSOC Survey Team, 2018)</span> y la primera ola del <strong>Estudio Longitudinal Social de Chile (2016)</strong> <span class="citation">(ELSOC Survey Team, 2016)</span>. Ambas bases de datos se encuentran disponibles para libre descarga y son citables a través de un <strong>DOI</strong>. La Tabla 2 ilustra los siete componentes principales de una referencia para fuente de datos en Dataverse.</p>
+<p><br></p>
+<div style="float:right; margin-left: 20px; margin-right: 0px;">
+<div class="figure">
+<img src="images/github.png" alt="Fig. 8: Github" style="width:9em" />
+<p class="caption"><strong>Fig. 8</strong>: Github</p>
+</div>
+</div>
+<p>En segunda instancia, el OSF permite vincular un proyecto con un repositorio en GitHub. En principio, <a href="https://github.com/">GitHub</a> está orientado a almacenar de proyectos a través del control de versiones basados en <a href="https://es.wikipedia.org/wiki/Git">Git</a>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Dentro de los posibles usos que se le pueden dar a GitHub, el principal ha sido el almacenamiento de código por parte de desarrolladores y programadores.</p>
+<p>Desde el punto de vista de la apertura y la colaboración en Ciencias Sociales, el control de versiones basado en Git ofrece la oportunidad de guardar componentes específicos de un proyecto, tales como el código de análisis y documentos en <strong>texto plano</strong><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> .</p>
+<hr />
+<!-- * Colaboración con GitHub y vínculo con OSF [aquí]() (En desarrollo)    -->
+<h3 id="identificacion">Identificación</h3>
 <blockquote>
 <p><a href="https://orcid.org/">ORCID</a></p>
 </blockquote>
+<h3 id="sitio-web">Sitio Web</h3>
+<ul>
+<li>Sitio Web en <a href="https://jciturras.github.io/opscoes.github.io/">GitHub pages</a> del proyecto.</li>
+</ul>
 </div>
 <div id="referencias" class="section level4 unnumbered">
 <h4>Referencias</h4>
 <div id="refs" class="references">
 <div id="ref-Camerer2018">
 <p>Camerer, C. F., Dreber, A., Holzmeister, F., Ho, T.-H., Huber, J., Johannesson, M., … Wu, H. (2018). Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. <em>Nature Human Behaviour</em>, <em>2</em>(9), 637–644. <a href="https://doi.org/10.1038/s41562-018-0399-z">https://doi.org/10.1038/s41562-018-0399-z</a></p>
+</div>
+<div id="ref-ENACOES2014">
+<p>COES-ELSOC Survey Team. (2018). Encuesta sobre Conflicto y Cohesion Social en Chile 2014. Harvard Dataverse. <a href="https://doi.org/10.7910/dvn/zpj5vx">https://doi.org/10.7910/dvn/zpj5vx</a></p>
+</div>
+<div id="ref-ELSOC2016">
+<p>ELSOC Survey Team. (2016). Estudio Longitudinal Social de Chile 2016. <em>CONICYT/FONDAP/15130009</em>. <a href="https://doi.org/https://doi.org/10.7910/DVN/0KIRBJ,">https://doi.org/https://doi.org/10.7910/DVN/0KIRBJ,</a></p>
 </div>
 <div id="ref-Nosek2015">
 <p>Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., … Yarkoni, T. (2015). Promoting an open research culture. <em>Science</em>, <em>348</em>(6242), 1422. <a href="https://doi.org/10.1126/science.aab2374">https://doi.org/10.1126/science.aab2374</a></p>
@@ -456,11 +617,15 @@ Crear proyecto
 <ol>
 <li id="fn1"><p>Asistente de la Línea de Interacciones Grupales e individuales en <strong><a href="https://www.coes.cl/">COES</a></strong><a href="#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p>Subdirector e Investigador Principal en <strong><a href="https://www.coes.cl/">COES</a></strong><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p><em>Git</em> es un sistema de control de versiones distribuido de código abierto y gratuito, diseñado para manejar todo, desde proyectos pequeños hasta proyectos muy grandes, con rapidez y eficiencia.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Para una introducción a la redacción de documentos en <code>texto plano</code> revisar <em>“The Plain Person’s Guide”</em> de Kieran Healy. <a href="https://kieranhealy.org/files/papers/plain-person-text.pdf">ver</a><a href="#fnref4" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
