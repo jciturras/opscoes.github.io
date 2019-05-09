@@ -10,10 +10,11 @@ navbar:
     - text: " "
       icon: fa-github
       href: https://github.com/jciturras
-    - text: "OSF"
+    - text: "Ciencia Abierta"
       icon: ai-osf
       href: osf.html
     - text: "Dataverse"
+      icon: ai-dataverse
       href: dataverse_elsoc.html  
     - text: "Menu" 
       menu:
