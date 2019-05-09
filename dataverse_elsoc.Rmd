@@ -1,0 +1,119 @@
+---
+title: "Dataverse Estudio Social Longitudinal de Chile"
+author: "Julio César Iturra Sanhueza - jciturra@uc.cl"
+date: "Mayo 2019"
+output:
+  html_document: 
+    css: juitsa-theme.css
+    toc: yes
+    toc_float: yes
+bibliography: ../../Dropbox/Bibtex/zlibrary.bib
+csl: ../../Dropbox/Bibtex/apa6.csl
+---
+
+# Introducción
+
+***
+
+El presente documento tiene por objetivo el poner a disposición las herramientas para la utilización de las bases de datos del Estudio Social Longitudinal de Chile (ELSOC) directamente desde el repositorio en Dataverse.
+
+Como se ha descrito en el documento de Ciencia abierta, el uso de repositorios abiertos tiene la ventaja de ofrecer un acceso abierto a los materiales de investigación y así contribuir a la reproducibilidad de la investigación científica. 
+
+Es importante destacar que los procedimientos que se mostrarán a continuación están orientados a usuarios de **`R`**, por tanto invitamos al lector/a a familiarizarse con las ventajas de emplear software abierto y gratuito. A continuación se mostrarán los pasos a seguir para tener acceso a la base de datos para las olas 2016 y 2017 de la encuesta longitudinal ELSOC.
+
+[@ELSOC2016]
+
+## Instalación de paquete `dataverse`
+
+Es importante mencionar que las instrucciones se basan en el tutorial elaborado por Thomas @Leeper2017, autor del paquete [`dataverse`](https://cran.r-project.org/web/packages/dataverse/index.html).
+
+### Instalación y carga del paquete
+```{r eval=FALSE, include=TRUE}
+install.packages("dataverse")
+library(dataverse)
+```
+
+```{r include=FALSE}
+library(dataverse)
+DOI16 <- "https://doi.org/10.7910/DVN/0KIRBJ"
+DOI17 <- "https://doi.org/10.7910/DVN/JDJLPQ"
+```
+
+
+```{r ELSOC2016, eval=FALSE, include=TRUE, results='hold'}
+
+# ELSOC 2016 --------------------------------------------------------------
+Sys.setenv("DATAVERSE_SERVER" = "dataverse.harvard.edu")
+```
+
+El primer paso es declarar cuál es el servidor de Dataverse que emplearemos para descargar nuestro set de datos. La función `Sys.setenv` permite asignar un objeto llamdo `DATAVERSE_SERVER` al cual le asignamos el Dataverse de Harvard, donde se ha sido guardado **ELSOC.**
+
+Luego de declarar el servidor, debemos conocer cuál es el **DOI** del repositorio de **COES**. Por ejemplo, el DOI del Dataset de la ola de 2016 es `r DOI16`. Aquí es posible encontrar las bases de datos y la documentación de la encuesta.
+
+Teniendo claro cuál es el identificador del repositorio, podemos realizar el siguiente paso.     
+
+```{r eval=TRUE, include=TRUE, results='hold'}
+DOI16 <- "https://doi.org/10.7910/DVN/0KIRBJ"
+
+dataset16 <- get_dataset(DOI16)
+print(dataset16)
+```
+
+`DOI16` es un objeto que contiene el identificador, y `get_dataset` correspone a la función que extrae la información desde el repositorio y la guarda en un objeto llamado `dataset16`. Teniendo preparado el Dataset, podemos proceder a descargar los datos al interior del repositorio.
+
+
+### Descargar los archivos
+
+A continuación, se presentan dos funciones. La primera es `get_file` del paquete `dataverse`, la cual identifica el nombre del archivo y el dataset (usando el DOI), lo cual crea un archivo de clase `raw`. Este último, puede ser guardado localmente con la extensión original para ser empelado en el software (`.dta` o `.Rdata` ).
+
+#### Alternativa A
+```{r descargar1, eval=FALSE, include=TRUE, results='hold'}
+#--- Alternativa A -----
+elsoc16 <- get_file(file = "ELSOC_W01_v3.10_Stata14.tab", # Paso 1: declarar base de datos y descargar
+                  dataset = DOI16)
+
+writeBin(elsoc16,"ELSOC_W01_v3.10.dta") #Paso 2: descargar localmente el archivo en su respectiva extensión
+
+```
+
+#### Alternativa B
+
+También es posible descargar y guardar localmente de manera simultánea:
+
+```{r}
+#--- Alternativa B -----
+
+writeBin(get_file(file = "ELSOC_W01_v3.10_Stata14.tab", #Descarga y guardado local en .dta
+                  dataset = DOI16), 
+         "ELSOC_W01_v3.10.dta")
+
+writeBin(get_file(file = "ELSOC_W01_v3.10_R.tab", #Descarga y guardado local en .RData
+                  dataset = DOI16), 
+         "ELSOC_W01_v3.10.RData")
+```
+
+El mismo procedimiento puede realizarse con la ola 2 de la encuesta ELSOC del año 2017. 
+
+```{r ELSOC2017, eval=FALSE, include=TRUE, results='hold'}
+# ElSOC 2017 --------------------------------------------------------------
+
+DOI17 <- "https://doi.org/10.7910/DVN/JDJLPQ"
+
+Sys.setenv("DATAVERSE_SERVER" = "dataverse.harvard.edu")
+(dataset17 <- get_dataset(DOI17))
+
+dataset17$files[c("filename","contentType")]
+
+```
+
+```{r descargar2, eval=FALSE, include=TRUE}
+writeBin(get_file(file = "ELSOC_W02_v2.10_Stata14.tab", 
+                  dataset = DOI17), 
+         "ELSOC_W02_v2.10_Stata14.dta")
+
+writeBin(get_file(file = "ELSOC_W02_v2.10_R.tab", 
+                  dataset = DOI17), 
+         "ELSOC_W02_v2.10.RData")
+```
+
+# Referencias 
