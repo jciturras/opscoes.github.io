@@ -7,9 +7,6 @@ navbar:
       href: index.html
     - text: "Sobre"
       href: about.html
-    - text: " "
-      icon: fa-github
-      href: https://github.com/jciturras
     - text: "Ciencia Abierta"
       icon: ai-osf
       href: osf.html

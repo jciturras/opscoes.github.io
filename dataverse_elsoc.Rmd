@@ -29,6 +29,7 @@ Es importante mencionar que las instrucciones se basan en el tutorial elaborado 
 ```{r eval=FALSE, include=TRUE}
 install.packages("dataverse")
 library(dataverse)
+library(dplyr)
 ```
 
 ```{r include=FALSE}
@@ -44,7 +45,7 @@ DOI17 <- "https://doi.org/10.7910/DVN/JDJLPQ"
 Sys.setenv("DATAVERSE_SERVER" = "dataverse.harvard.edu")
 ```
 
-El primer paso es declarar cuál es el servidor de Dataverse que emplearemos para descargar nuestro set de datos. La función `Sys.setenv` permite asignar un objeto llamdo `DATAVERSE_SERVER` al cual le asignamos el Dataverse de Harvard, donde se ha sido guardado **ELSOC.**
+El primer paso es declarar cuál es el servidor de Dataverse que emplearemos para descargar nuestro set de datos. La función `Sys.setenv` permite asignar un objeto llamdo `DATAVERSE_SERVER` al cual le asignamos el Dataverse de Harvard, donde se ha sido guardada la encuesta **ELSOC.**
 
 Luego de declarar el servidor, debemos conocer cuál es el **DOI** del repositorio de **COES**. Por ejemplo, el DOI del Dataset de la ola de 2016 es `r DOI16`. Aquí es posible encontrar las bases de datos y la documentación de la encuesta.
 
@@ -73,6 +74,23 @@ elsoc16 <- get_file(file = "ELSOC_W01_v3.10_Stata14.tab", # Paso 1: declarar bas
 writeBin(elsoc16,"ELSOC_W01_v3.10.dta") #Paso 2: descargar localmente el archivo en su respectiva extensión
 
 ```
+
+Habiendo terminado este procedimiento, la base de dato debería quedar guardad en el dorectorio local donde se está trabajando (working directory).  
+
+```{r message=FALSE, warning=FALSE}
+library(haven)
+library(kableExtra)
+library(knitr)
+
+
+elsoc16<- read_dta("ELSOC_W01_v3.10.dta") #cargar base de datos en .dta
+
+kable(elsoc16[1:50,]) %>% 
+ kable_styling() %>%
+  scroll_box(width = "100%", height = "500px")
+```
+
+
 
 #### Alternativa B
 
