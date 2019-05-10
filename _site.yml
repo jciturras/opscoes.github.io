@@ -1,4 +1,5 @@
 name: "Hola"
+output_dir: "."  
 navbar:
   title: "Centro de Estudios de Conflicto y Cohesión Social" 
   left:
