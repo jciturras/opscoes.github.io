@@ -5,8 +5,10 @@ date: "Mayo 2019"
 output:
   html_document: 
     css: juitsa-theme.css
-    toc: yes
-    toc_float: yes
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
 bibliography: ../../Dropbox/Bibtex/zlibrary.bib
 csl: ../../Dropbox/Bibtex/apa6.csl
 ---
