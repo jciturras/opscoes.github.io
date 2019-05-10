@@ -1,12 +1,11 @@
 ---
 bibliography: ../../Dropbox/Bibtex/zlibrary.bib
 csl: ../../Dropbox/Bibtex/apa6.csl
-export_on_save:
-  html: true
 output:
   html_document:
-    toc: yes
-    toc_float: yes
+    toc: true
+    toc_float: 
+      collapsed: false
     includes:
         in_header: academicons.html      
 ---
