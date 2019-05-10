@@ -25,13 +25,13 @@ output:
 
 <div style="text-align: justify">
 
-### Introducción    
+# Introducción    
 
 El presente documento tiene por objetivo realizar una introducción conceptual a los principios y prácticas de un modo de trabajo basado en Ciencia Abierta, lo cual a su vez busca ser un aporte para las y los investigadores de la Línea de Interacciones Grupales e Individuales del **[Centro de Conflicto y Cohesión Social](https://www.coes.cl/)**.
 
 La primera sección abordará los principios que orientan una práctica científica basada en la Ciencia Abierta, así también, las prácticas asociadas a una comunidad científica con miras a la producción de conocimiento que cumple con los principios de *Reproducibilidad*, *Apertura* y *Transparencia*. La segunda sección busca introducir al marco de trabajo que ofrece el _**Open Science Framework**_. Comunidad que ha facilitado el acceso libre y transparente a la investigación científica ya realizada, en curso o que su diseño se encuentra en elaboración.
 
-###  *Reproducibilidad, Apertura y Transparencia*   
+##  *Reproducibilidad, Apertura y Transparencia*   
 
 <div style="float:left;margin-left: 0px; margin-right: 30px;">
 
@@ -41,14 +41,14 @@ La primera sección abordará los principios que orientan una práctica científ
 
 En el contexto de un trabajo colaborativo como parte del quehacer científico, podemos encontrar ejes orientadores o "principios" que dan forma a la manera en que es posible realizar investigación. Siguiendo a  @Nosek2015, una práctica científica basada en la Ciencia Abierta se orienta en base a tres dimensiones o pilares fundamentales. Éstos son Reproducibilidad, Apertura y Transparencia.
 
-#### Reproducibilidad  
+### Reproducibilidad  
 
 Cuando nos referimos a la idea de **Reproducibilidad** (*Reproducibility*), estamos hablando de cómo se vuelve factible que la evidencia producida pueda ser replicada por otros/as investigadores de la comunidad científica. En este sentido, el carácter reproducible de la investigación científica guarda relación con las distintas etapas a través de las cuales debe transitar el trabajo de las y los investigadores.
 
 
 Conforme a lo anterior, el carácter reproducible del trabajo científico requiere que las etapas de diseño, ejecución, análisis y reporte de resultados tengan presente que cada uno de estos procedimientos deben estar en conocimiento de otros/as miembros de la comunidad científica para garantizar la reproducibilidad de la investigación. De esta manera, se estaría cumpliendo con los estándares mínimos que se requieren para llevar adelante una agenda orientada a que los resultados de la investigación sean reproducibles. No obstante, para cumplir con lo mencionado, se requiere que la comunidad científica tenga acceso a la información, y es desde ahí donde la **Apertura** juega un rol fundamental.   
 
-#### Apertura
+### Apertura
 
 ¿Podemos garantizar reproducibilidad cuando existen restricciones con respecto a las distintas etapas de la investigación? La respuesta a esta pregunta es *no*, y la alternativa para darle una salida es la **Apertura** (*Openness*) de los componentes y productos de la investigación.  @Nosek2015 sostienen que a lo largo del proceso científico,  la apertura juega un rol fundamental en la medida de que sin la existencia de ésta sería imposible evaluar y reproducir los resultados. En una línea similar, @Camerer2018 sugieren que el acceso abierto a los materiales de investigación permite a los miembros de una comunidad científica tomar postura con respecto a la evidencia producida por sus pares.   
 
@@ -68,7 +68,7 @@ iii. Estándares que incentiven a los autores/as a compartir sistemáticamente l
 
 iv. Compartir la estrategia analítica, lo cual abarca diversas dimensiones del trabajo investigativo según cada disciplina o métodos empleados. No obstante, un buen ejemplo respecto a cómo es factible cumplir con este estándar, es poner a disposición el código empleado para el análisis estadístico a través de plataformas de acceso libre. Esto último será expuesto más en detalle en el apartado final.
 
-#### Transparencia
+### Transparencia
 
 La Transparencia puede considerarse como un "objetivo transversal" de la Ciencia Abierta. Basado en los cuatro puntos señalados en el apartado anterior, poner a disposición de la comunidad científica todo el proceso investigativo permite obtener mayores grados de confianza en los resultados reportados, y de esta manera discernir entre aquellos que representan un aporte para las discusiones disciplinares y cuáles no.          
 
@@ -96,7 +96,7 @@ Un esfuerzo por modificar las prácticas de las y los investigadores, tiene como
 
 <br>
 
-#### Ciencias Sociales abiertas
+## Ciencias Sociales abiertas
 
 <div style="float:left; margin-left: 0px; margin-right: 25px;">
 
@@ -108,7 +108,7 @@ Estudios como el de @Camerer2018 han demostrado la importancia del pre-registro 
 
 La Figura 4 muestra cómo es posible emplear plataformas integradas como el [*Open Science Framework*](https://osf.io/) que permiten poner a disposición el plan de análisis, rutinas de código y bases de datos. Si bien el trabajo de @Camerer2018 está orientado a la reproducibilidad de estudios experimentales, los mismos estándares pueden ser empleados en estudios cuantitativos de corte transversal o longitudinal. Para el último caso, el acceso abierto a las rutinas de código de análisis estadístico, y a las bases de datos, representan un estándar mínimo pueden seguir estudios de estas características.
 
-### Características del segundo periodo del Centro
+# Características del segundo periodo del Centro
 
 ---
 
@@ -124,7 +124,7 @@ Dentro de las cinco tareas para el nuevo periodo de COES, promover una agenda de
 
 Las implementación de una agenda de estas características contribuirá de manera transversal a los objetivos de Centro, además de poner las herramientas a disposición de otras entidades académicas que manifiesten interés en desarrollar políticas institucionales basadas en los principios de la Ciencia Abierta.        
 
-#### Propuesta de Trabajo
+## Propuesta de Trabajo
 
 En consonancia con el apartado anterior, este documento de busca contribuir a una agenda basada en los principio de la Ciencia Abierta para el Centro de Estudios de Conflicto y Cohesión Social. A continuación se presentarán una propuesta de trabajo basada en el entorno de colaboración académica que ofrece el [*Open Science Framework*](https://osf.io/).    
 
@@ -273,4 +273,4 @@ Desde el punto de vista de la apertura y la colaboración en Ciencias Sociales, 
 
 </div>
 
-#### Referencias
+# Referencias
