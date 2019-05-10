@@ -4,6 +4,7 @@ bibliography: ../../Dropbox/Bibtex/zlibrary.bib
 csl: ../../Dropbox/Bibtex/apa6.csl
 output:
   html_document:
+    css: "juitsa-theme.css"
     toc: true
     toc_float: 
       collapsed: false
@@ -23,8 +24,6 @@ output:
 
 ---
 
-<div style="text-align: justify">
-
 # Introducción    
 
 El presente documento tiene por objetivo realizar una introducción conceptual a los principios y prácticas de un modo de trabajo basado en Ciencia Abierta, lo cual a su vez busca ser un aporte para las y los investigadores de la Línea de Interacciones Grupales e Individuales del **[Centro de Conflicto y Cohesión Social](https://www.coes.cl/)**.
@@ -40,6 +39,8 @@ La primera sección abordará los principios que orientan una práctica científ
 </div>
 
 En el contexto de un trabajo colaborativo como parte del quehacer científico, podemos encontrar ejes orientadores o "principios" que dan forma a la manera en que es posible realizar investigación. Siguiendo a  @Nosek2015, una práctica científica basada en la Ciencia Abierta se orienta en base a tres dimensiones o pilares fundamentales. Éstos son Reproducibilidad, Apertura y Transparencia.
+
+<br>
 
 ### Reproducibilidad  
 
@@ -157,8 +158,6 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 <br>
 <br>
 
-
-
 ### Gestión de un proyecto en Open Science Framework
 
 Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de [ELSOC](http://www.elsoc.cl/) [@ELSOC2016] .
@@ -233,7 +232,7 @@ Por otro lado, tenemos repositorios como **Dataverse Project** o **GitHub**, ent
 
 
 
-El [Dataverse Project](https://dataverse.org/) ofrece un **repositorio de datos abierto** y gratuito para la comunidad científica, el cual permite mantener un flujo de información constante entre Investigadores/as, Revistas, Instituciones y Desarrolladores. Al incrementar la visibilidad de las fuentes de datos al utilizar Dataverse, investigadores/as pueden obtener mayor reconocimiento por parte de la comunidad científica, así también un medio a través del cual se puede obtener un identificador único que permite citar adecuadamente la base de datos.
+El [Dataverse Project](https://dataverse.org/) ofrece un **repositorio de datos abierto** y gratuito para la comunidad científica, el cual permite mantener un flujo de información constante entre Investigadores/as, Revistas, Instituciones y Desarrolladores. Al incrementar la visibilidad de las fuentes de datos al utilizar Dataverse, investigadores/as pueden obtener mayor reconocimiento por parte de la comunidad científica, así también es un medio a través del cual se puede obtener un identificador único que permite citar adecuadamente la base de datos.
 
 <div style="float:left; margin-left: 0px; margin-right: 20px;">
   ![**Fig. 7**: ELSOC en Dataverse](images/dataverseelsoc.png){width=18em}
@@ -260,17 +259,13 @@ Desde el punto de vista de la apertura y la colaboración en Ciencias Sociales, 
 
 [^4]: Para una introducción a la redacción de documentos en ``texto plano`` revisar  _"The Plain Person's Guide"_ de Kieran Healy. [ver](https://kieranhealy.org/files/papers/plain-person-text.pdf)
 
-### Identificación
+<!-- ### Identificación -->
 
-> [ORCID](https://orcid.org/)
+<!-- > [ORCID](https://orcid.org/) -->
 
-### Sitio Web
-
-
-- Sitio Web en [GitHub pages](https://jciturras.github.io/opscoes.github.io/) del proyecto.
+<!-- ### Sitio Web -->
 
 
-
-</div>
+<!-- - Sitio Web en [GitHub pages](https://jciturras.github.io/opscoes.github.io/) del proyecto. -->
 
 # Referencias
