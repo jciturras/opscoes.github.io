@@ -1,4 +1,5 @@
 ---
+title: "Documento de Trabajo: Ciencia Abierta"
 bibliography: ../../Dropbox/Bibtex/zlibrary.bib
 csl: ../../Dropbox/Bibtex/apa6.csl
 output:
@@ -9,7 +10,6 @@ output:
     includes:
         in_header: academicons.html      
 ---
-# Documento de Trabajo: Ciencia Abierta
 
 <div style="text-align: right">
 **Julio César Iturra Sanhueza** [^1]

@@ -1,10 +1,8 @@
 ---
 title: "Dataverse Estudio Social Longitudinal de Chile"
-author: "Julio César Iturra Sanhueza - jciturra@uc.cl"
-date: "Mayo 2019"
 output:
   html_document: 
-    css: juitsa-theme.css
+    css: "juitsa-theme.css"
     toc: true
     toc_float:
       collapsed: false
@@ -12,6 +10,11 @@ output:
 bibliography: ../../Dropbox/Bibtex/zlibrary.bib
 csl: ../../Dropbox/Bibtex/apa6.csl
 ---
+
+
+<div style="text-align: right"> **Julio César Iturra Sanhueza** [^1]</div>
+
+[^1]: Asistente de la Línea de Interacciones Grupales e individuales en **[COES](https://www.coes.cl/)**
 
 # Introducción
 
