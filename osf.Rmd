@@ -24,7 +24,7 @@ output:
 
 ---
 
-# Introducción    
+# Introducción
 
 El presente documento tiene por objetivo realizar una introducción conceptual a los principios y prácticas de un modo de trabajo basado en Ciencia Abierta, lo cual a su vez busca ser un aporte para las y los investigadores de la Línea de Interacciones Grupales e Individuales del **[Centro de Conflicto y Cohesión Social](https://www.coes.cl/)**.
 
@@ -109,7 +109,7 @@ Estudios como el de @Camerer2018 han demostrado la importancia del pre-registro 
 
 La Figura 4 muestra cómo es posible emplear plataformas integradas como el [*Open Science Framework*](https://osf.io/) que permiten poner a disposición el plan de análisis, rutinas de código y bases de datos. Si bien el trabajo de @Camerer2018 está orientado a la reproducibilidad de estudios experimentales, los mismos estándares pueden ser empleados en estudios cuantitativos de corte transversal o longitudinal. Para el último caso, el acceso abierto a las rutinas de código de análisis estadístico, y a las bases de datos, representan un estándar mínimo pueden seguir estudios de estas características.
 
-# Características del segundo periodo del Centro
+# Segundo periodo del Centro
 
 ---
 
@@ -158,7 +158,7 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 <br>
 <br>
 
-### Gestión de un proyecto en Open Science Framework
+### Gestión de un proyecto en OSF
 
 Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de [ELSOC](http://www.elsoc.cl/) [@ELSOC2016] .
 
