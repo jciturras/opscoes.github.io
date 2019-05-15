@@ -24,7 +24,7 @@ El presente documento tiene por objetivo el poner a disposición las herramienta
 
 Como se ha descrito en el documento de Ciencia abierta, el uso de repositorios abiertos tiene la ventaja de ofrecer un acceso abierto a los materiales de investigación y así contribuir a la reproducibilidad de la investigación científica. 
 
-Es importante destacar que los procedimientos que se mostrarán a continuación están orientados a usuarios de **`R`**, por tanto invitamos al lector/a a familiarizarse con las ventajas de emplear software abierto y gratuito. A continuación se mostrarán los pasos a seguir para tener acceso a la base de datos para las olas 2016 y 2017 de la encuesta longitudinal ELSOC [@ELSOC2016].
+Es importante destacar que los procedimientos que se mostrarán a continuación están orientados a usuarios de **`R`**, por tanto invitamos al lector/a a familiarizarse con las ventajas de emplear software abierto y gratuito. A continuación se mostrarán los pasos a seguir para tener acceso a la base de datos para las olas 2016 y 2017 de la encuesta longitudinal ELSOC [@ELSOC2016b].
 
 ## Instalación de paquete `dataverse`
 
@@ -56,7 +56,7 @@ Luego de declarar el servidor, debemos conocer cuál es el **DOI** del repositor
 
 Teniendo claro cuál es el identificador del repositorio, podemos realizar el siguiente paso.     
 
-```{r eval=TRUE, include=TRUE, results='hold'}
+```{r eval=TRUE, include=TRUE, results='hold', cache=TRUE}
 DOI16 <- "https://doi.org/10.7910/DVN/0KIRBJ"
 
 dataset16 <- get_dataset(DOI16)
@@ -71,7 +71,7 @@ print(dataset16)
 A continuación, se presentan dos funciones. La primera es `get_file` del paquete `dataverse`, la cual identifica el nombre del archivo y el dataset (usando el DOI), lo cual crea un archivo de clase `raw`. Este último, puede ser guardado localmente con la extensión original para ser empelado en el software (`.dta` o `.Rdata` ).
 
 #### Alternativa A
-```{r descargar1, eval=FALSE, include=TRUE, results='hold'}
+```{r descargar1, eval=FALSE, include=TRUE, results='hold', cache=TRUE}
 #--- Alternativa A -----
 elsoc16 <- get_file(file = "ELSOC_W01_v3.10_Stata14.tab", # Paso 1: declarar base de datos y descargar
                   dataset = DOI16)
@@ -82,7 +82,7 @@ writeBin(elsoc16,"ELSOC_W01_v3.10.dta") #Paso 2: descargar localmente el archivo
 
 Habiendo terminado este procedimiento, la base de dato debería quedar guardad en el dorectorio local donde se está trabajando (working directory).  
 
-```{r message=FALSE, warning=FALSE}
+```{r descargar_dta, message=FALSE, warning=FALSE}
 library(haven)
 library(kableExtra)
 library(knitr)
@@ -101,7 +101,7 @@ kable(elsoc16[1:50,]) %>%
 
 También es posible descargar y guardar localmente de manera simultánea:
 
-```{r}
+```{r Alternativa B, cache=TRUE}
 #--- Alternativa B -----
 
 writeBin(get_file(file = "ELSOC_W01_v3.10_Stata14.tab", #Descarga y guardado local en .dta
@@ -115,7 +115,7 @@ writeBin(get_file(file = "ELSOC_W01_v3.10_R.tab", #Descarga y guardado local en 
 
 El mismo procedimiento puede realizarse con la ola 2 de la encuesta ELSOC del año 2017. 
 
-```{r ELSOC2017, eval=FALSE, include=TRUE, results='hold'}
+```{r ELSOC2017, eval=FALSE, include=TRUE, results='hold', cache=TRUE}
 # ElSOC 2017 --------------------------------------------------------------
 
 DOI17 <- "https://doi.org/10.7910/DVN/JDJLPQ"
