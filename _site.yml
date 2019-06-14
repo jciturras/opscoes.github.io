@@ -13,10 +13,15 @@ navbar:
       href: osf.html
     - text: "Dataverse"
       icon: ai-dataverse
-      href: dataverse_elsoc.html  
+      href: dataverse_elsoc.html
+    - text: "Código"
+      menu:  
+        - text: " "
+          icon: ai-researcherid
+          href: https://www.r-project.org/  
     - text: "Menu" 
       menu:
-        - text: " "
+        - text: "Researchgate"
           icon: ai-researchgate
           href: https://www.researchgate.net/profile/Julio_Iturra_Sanhueza
         - text: "Open Science Framework"
