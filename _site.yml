@@ -35,6 +35,7 @@ output:
     includes:
         in_header: academicons.html
     include: ["juitsa-theme.css"]
+    css: juitsa-theme.css
 
  
 

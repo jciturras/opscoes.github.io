@@ -1,4 +1,7 @@
 body{
-  text-align: justify;
+  text-align: justify;  font-family: "Lato";
 }
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
 
