@@ -1,0 +1,26 @@
+---
+title: "Control de versiones usando Github"
+author: "Julio César Iturra Sanhueza - jciturra@uc.cl"
+bibliography: ../../Dropbox/Bibtex/zlibrary.bib
+csl: ../../Dropbox/Bibtex/apa6.csl
+output:
+  html_document:
+    css: "juitsa-theme.css"
+    toc: true
+    toc_float: 
+      collapsed: false
+    includes:
+        in_header: academicons.html      
+---
+# Introducción 
+
+## Git
+### Github
+
+# Editor 
+
+## Atom
+
+## RStudio
+
+# GitHub Desktop

@@ -1,5 +1,5 @@
 name: "Hola"
-output_dir: "."  
+output_dir: "." # Esto es para que se compile en el rootdir  
 navbar:
   title: "Centro de Estudios de Conflicto y Cohesión Social" 
   left:
@@ -18,7 +18,10 @@ navbar:
       menu:  
         - text: " "
           icon: ai-researcherid
-          href: https://www.r-project.org/  
+          href: instalacion_R.html
+        - text: "Control de Versiones"
+          icon: fa-github 
+          href: version_control_github.html  
     - text: "Menu" 
       menu:
         - text: "Researchgate"

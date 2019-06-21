@@ -24,7 +24,7 @@ El presente documento tiene por objetivo el poner a disposición las herramienta
 
 Como se ha descrito en el documento de Ciencia abierta, el uso de repositorios abiertos tiene la ventaja de ofrecer un acceso abierto a los materiales de investigación y así contribuir a la reproducibilidad de la investigación científica. 
 
-Es importante destacar que los procedimientos que se mostrarán a continuación están orientados a usuarios de **`R`**, por tanto invitamos al lector/a a familiarizarse con las ventajas de emplear software abierto y gratuito. A continuación se mostrarán los pasos a seguir para tener acceso a la base de datos para las olas 2016 y 2017 de la encuesta longitudinal ELSOC [@ELSOC2016b].
+Es importante destacar que los procedimientos que se mostrarán a continuación están orientados a usuarios de **`R`** , por tanto invitamos al lector/a a familiarizarse con las ventajas de emplear software abierto y gratuito. A continuación se mostrarán los pasos a seguir para tener acceso a la base de datos para las olas 2016 y 2017 de la encuesta longitudinal ELSOC [@ELSOC2016b].
 
 ## Instalación de paquete `dataverse`
 

@@ -1,0 +1,85 @@
+---
+title: "Instalación de R"
+author: "Julio César Iturra Sanhueza - jciturra@uc.cl"
+output:
+  html_document:
+    css: "juitsa-theme.css"
+    toc: true
+    toc_float: 
+      collapsed: false
+    includes:
+        in_header: academicons.html
+---
+
+# ¿Qué es **``R``** ? 
+
+1. **`R`** es un software libre, por tanto es totalmente gratuito y abierto. Tiene una comunidad a nivel mundial muy activa, donde se comparte
+todo tipo de contenido relacionado con el análisis de datos.
+
+2. Es un lenguaje de programación, de modo que también es posible que los usuarios elaboren sus propias funciones o "paquetes".
+
+3. Tiene una fuerte orientación al análisis estadístico y visualización de datos.
+
+4. Una de sus principales características es que posee una lógica de programación orientada a **Objetos** (Object Oriented programming). Lo veremos en detalle más adelante. 
+
+5. El editor nativo de R es **poco amigable** para los usuarios. Por lo tanto, lo más adecuado es emplear una **Interfaz de Usuario** (IDE por *Integrated development environment*) 
+
+    * [**RStudio**](https://www.rstudio.com/) será la interfaz que utilizaremos en el curso.
+
+
+## Instalación del software: Paquete Estadístico.
+
+a. Primero debemos ingresar a el sitio web de **R project** [www.r-project.org](https://www.r-project.org/).
+
+b. Luego debemos ingresar a **Download / [CRAN](https://cran.r-project.org/mirrors.html)**.
+
+    - Aquí debemos seleccionar el Mirror correspondiente a Chile.
+        * En nuestro caso usaremos [dirichlet.mat.puc.cl](https://dirichlet.mat.puc.cl/).
+        
+    - Debemos seleccionar nuestro **Sistema Operativo** y descargar el archivo para instalar **`R`**.
+        - [Download R for Linux](https://dirichlet.mat.puc.cl/bin/linux/)
+        - [Download R for (Mac) OS X](https://dirichlet.mat.puc.cl/bin/macosx/)
+        - [Download R for Windows](https://dirichlet.mat.puc.cl/bin/windows/)
+
+En el cuadro siguiente es posible ver cómo se realiza la descarga e instalación de **R**
+
+***
+
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='**Instalación de R**'}
+knitr::include_graphics(path = "images/dowr.gif")
+```
+
+***
+## Instalación de **RStudio**
+
+Como se mencionó anteriormente, **R** es el paquete estadístico. Sin embargo, la interfaz por defecto es poco amigable para los usuarios que provienen de Softwares como SPSS o Stata en donde es posible ejecutar análisis empleando la lógica de "menú-click".
+
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='**Interfaz de R base**'}
+knitr::include_graphics(path = "images/rawR.jpg")
+```
+
+## Por otro lado, tenemos **RStudio**
+
+En el caso de **R**, existen softwares que permiten hacer la ejecución del análisis más simple. El presente documento está orientado a que puedan instalar **RStudio**.  
+
+***
+
+1. Debe ingresar a [www.rstudio.com](https://www.rstudio.com/)
+2. Buscar el cuadro que dice [**"Download RStudio"**](https://www.rstudio.com/products/rstudio/download/).
+3. Seleccionar **RStudio Desktop --  Open Source License**
+    
+    3.1. Seleccionar su Sistema operativo y descargar:
+    
+      * [RStudio 1.2.1335 - Windows 7+ (64-bit)](https://download1.rstudio.org/desktop/windows/RStudio-1.2.1335.exe)
+      * [RStudio 1.2.1335 - Mac OS X 10.12+ (64-bit)](https://download1.rstudio.org/desktop/macos/RStudio-1.2.1335.dmg)
+      * [RStudio 1.2.1335 - Ubuntu 14/Debian 8 (64-bit)](https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.1335-amd64.deb)
+
+    
+
+```{r echo=FALSE, out.width='80%', fig.align='center',fig.cap="**Instalación de RStudio**"}
+knitr::include_graphics(path = "images/rstudio1.gif")
+```
+***
+
+
+

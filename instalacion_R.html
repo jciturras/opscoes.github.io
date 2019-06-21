@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Julio César Iturra Sanhueza - jciturra@uc.cl" />
+
+
+<title>Instalación de R</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link rel="stylesheet" href="site_lib/academicons-1.8.6/css/academicons.css"/>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="juitsa-theme.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Centro de Estudios de Conflicto y Cohesión Social</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Inicio
+  </a>
+</li>
+<li>
+  <a href="about.html">Sobre</a>
+</li>
+<li>
+  <a href="osf.html">
+    <span class="ai ai-osf"></span>
+     
+    Ciencia Abierta
+  </a>
+</li>
+<li>
+  <a href="dataverse_elsoc.html">
+    <span class="ai ai-dataverse"></span>
+     
+    Dataverse
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Código
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="instalacion_R.html">
+        <span class="ai ai-researcherid"></span>
+         
+         
+      </a>
+    </li>
+    <li>
+      <a href="version_control_github.html">
+        <span class="fa fa-github"></span>
+         
+        Control de Versiones
+      </a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Menu
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://www.researchgate.net/profile/Julio_Iturra_Sanhueza">
+        <span class="ai ai-researchgate"></span>
+         
+        Researchgate
+      </a>
+    </li>
+    <li>
+      <a href="https://osf.io/xn6mh/">
+        <span class="ai ai-osf"></span>
+         
+        Open Science Framework
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Instalación de R</h1>
+<h4 class="author"><em>Julio César Iturra Sanhueza - <a href="mailto:jciturra@uc.cl" class="email">jciturra@uc.cl</a></em></h4>
+
+</div>
+
+
+<div id="que-es-r" class="section level1">
+<h1>¿Qué es <strong><code>R</code></strong> ?</h1>
+<ol style="list-style-type: decimal">
+<li><p><strong><code>R</code></strong> es un software libre, por tanto es totalmente gratuito y abierto. Tiene una comunidad a nivel mundial muy activa, donde se comparte todo tipo de contenido relacionado con el análisis de datos.</p></li>
+<li><p>Es un lenguaje de programación, de modo que también es posible que los usuarios elaboren sus propias funciones o “paquetes”.</p></li>
+<li><p>Tiene una fuerte orientación al análisis estadístico y visualización de datos.</p></li>
+<li><p>Una de sus principales características es que posee una lógica de programación orientada a <strong>Objetos</strong> (Object Oriented programming). Lo veremos en detalle más adelante.</p></li>
+<li><p>El editor nativo de R es <strong>poco amigable</strong> para los usuarios. Por lo tanto, lo más adecuado es emplear una <strong>Interfaz de Usuario</strong> (IDE por <em>Integrated development environment</em>)</p>
+<ul>
+<li><a href="https://www.rstudio.com/"><strong>RStudio</strong></a> será la interfaz que utilizaremos en el curso.</li>
+</ul></li>
+</ol>
+<div id="instalacion-del-software-paquete-estadistico." class="section level2">
+<h2>Instalación del software: Paquete Estadístico.</h2>
+<ol style="list-style-type: lower-alpha">
+<li><p>Primero debemos ingresar a el sitio web de <strong>R project</strong> <a href="https://www.r-project.org/">www.r-project.org</a>.</p></li>
+<li><p>Luego debemos ingresar a <strong>Download / <a href="https://cran.r-project.org/mirrors.html">CRAN</a></strong>.</p>
+<ul>
+<li>Aquí debemos seleccionar el Mirror correspondiente a Chile.
+<ul>
+<li>En nuestro caso usaremos <a href="https://dirichlet.mat.puc.cl/">dirichlet.mat.puc.cl</a>.</li>
+</ul></li>
+<li>Debemos seleccionar nuestro <strong>Sistema Operativo</strong> y descargar el archivo para instalar <strong><code>R</code></strong>.
+<ul>
+<li><a href="https://dirichlet.mat.puc.cl/bin/linux/">Download R for Linux</a></li>
+<li><a href="https://dirichlet.mat.puc.cl/bin/macosx/">Download R for (Mac) OS X</a></li>
+<li><a href="https://dirichlet.mat.puc.cl/bin/windows/">Download R for Windows</a></li>
+</ul></li>
+</ul></li>
+</ol>
+<p>En el cuadro siguiente es posible ver cómo se realiza la descarga e instalación de <strong>R</strong></p>
+<hr />
+<div class="figure" style="text-align: center">
+<img src="images/dowr.gif" alt="**Instalación de R**" width="80%" />
+<p class="caption">
+<strong>Instalación de R</strong>
+</p>
+</div>
+<hr />
+</div>
+<div id="instalacion-de-rstudio" class="section level2">
+<h2>Instalación de <strong>RStudio</strong></h2>
+<p>Como se mencionó anteriormente, <strong>R</strong> es el paquete estadístico. Sin embargo, la interfaz por defecto es poco amigable para los usuarios que provienen de Softwares como SPSS o Stata en donde es posible ejecutar análisis empleando la lógica de “menú-click”.</p>
+<div class="figure" style="text-align: center">
+<img src="images/rawR.jpg" alt="**Interfaz de R base**" width="80%" />
+<p class="caption">
+<strong>Interfaz de R base</strong>
+</p>
+</div>
+</div>
+<div id="por-otro-lado-tenemos-rstudio" class="section level2">
+<h2>Por otro lado, tenemos <strong>RStudio</strong></h2>
+<p>En el caso de <strong>R</strong>, existen softwares que permiten hacer la ejecución del análisis más simple. El presente documento está orientado a que puedan instalar <strong>RStudio</strong>.</p>
+<hr />
+<ol style="list-style-type: decimal">
+<li>Debe ingresar a <a href="https://www.rstudio.com/">www.rstudio.com</a></li>
+<li>Buscar el cuadro que dice <a href="https://www.rstudio.com/products/rstudio/download/"><strong>“Download RStudio”</strong></a>.</li>
+<li><p>Seleccionar <strong>RStudio Desktop – Open Source License</strong></p>
+<p>3.1. Seleccionar su Sistema operativo y descargar:</p>
+<ul>
+<li><a href="https://download1.rstudio.org/desktop/windows/RStudio-1.2.1335.exe">RStudio 1.2.1335 - Windows 7+ (64-bit)</a></li>
+<li><a href="https://download1.rstudio.org/desktop/macos/RStudio-1.2.1335.dmg">RStudio 1.2.1335 - Mac OS X 10.12+ (64-bit)</a></li>
+<li><a href="https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.1335-amd64.deb">RStudio 1.2.1335 - Ubuntu 14/Debian 8 (64-bit)</a></li>
+</ul></li>
+</ol>
+<div class="figure" style="text-align: center">
+<img src="images/rstudio1.gif" alt="**Instalación de RStudio**" width="80%" />
+<p class="caption">
+<strong>Instalación de RStudio</strong>
+</p>
+</div>
+<hr />
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
