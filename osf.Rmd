@@ -1,7 +1,7 @@
 ---
 title: "Documento de Trabajo: Ciencia Abierta"
-bibliography: ../../Dropbox/Bibtex/zlibrary.bib
-csl: ../../Dropbox/Bibtex/apa6.csl
+bibliography: zlibrary.bib
+csl: apa6.csl
 output:
   html_document:
     css: "juitsa-theme.css"

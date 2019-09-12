@@ -1,8 +1,8 @@
 ---
-title: "Control de versiones usando Github"
+title: "Reproducibilidad y Control de Versiones para las Ciencias Sociales"
 author: "Julio César Iturra Sanhueza - jciturra@uc.cl"
-bibliography: ../../Dropbox/Bibtex/zlibrary.bib
-csl: ../../Dropbox/Bibtex/apa6.csl
+bibliography: zlibrary.bib
+csl: apa6.csl
 output:
   html_document:
     css: "juitsa-theme.css"
@@ -12,11 +12,47 @@ output:
     includes:
         in_header: academicons.html      
 ---
-# Introducción 
+
+# Presentación
+
+El presente documento tiene el objetivo de introducir a investigadores e investigadoras de las Ciencias Sociales al uso de herramientas para el control de versiones para la realización de investigación que permita cumplir con los estándares de [**Reproducibilidad**, **Apertura** y **Transparencia**](osf.html) [@Nosek2015] 
 
 ## Git
+
+[https://git-scm.com/](Git)
+
+* Clone
+
+```{git}
+cd C:\Users\JC\Desktop\example
+git clone https://github.com/jciturras/xaringan-coes.git
+```
+
+
+* Commit
+
+```{git}
+git add <filename>
+git add .
+git commit -m "Commit message"
+```
+
+
+* Push
+
+```{git}
+git push origin master
+```
+
+
+* Pull
+
+
+```{git}
   git config --global user.email "jciturra@uc.cl"
   git config --global user.name "jciturras"
+```
+
 ### Github
 
 # Editor 

@@ -2,7 +2,7 @@ name: "Hola"
 output_dir: "." # Esto es para que se compile en el rootdir  
 navbar:
   title: "Centro de Estudios de Conflicto y Cohesión Social" 
-  left:
+  right:
     - text: "Inicio"
       icon: fa-home
       href: index.html
