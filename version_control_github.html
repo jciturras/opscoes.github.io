@@ -451,14 +451,20 @@ div.tocify {
 <div id="clone-push-commit-pull-branch-de-que-se-trata" class="section level2">
 <h2>Clone, Push, Commit, Pull, Branch: ¿de qué se trata?</h2>
 <ul>
-<li>Crear un Repositorio</li>
+<li>Crear username</li>
+</ul>
+<pre class="git"><code>git config --global user.email &quot;jciturra@uc.cl&quot;
+git config --global user.name &quot;jciturras&quot;</code></pre>
+<ul>
+<li>Crear un repositorio</li>
 </ul>
 <p><a href="Git">https://git-scm.com/</a></p>
 <ul>
-<li>Clone</li>
+<li><p>Trabajar con GitBash</p></li>
+<li><p>Clone</p></li>
 </ul>
 <pre class="git"><code>cd C:\Users\JC\Desktop\example
- # Hay que dar vuelta los slash
+# Hay que dar vuelta los slash
 
 git clone https://github.com/jciturras/xaringan-coes.git</code></pre>
 <ul>
@@ -467,7 +473,7 @@ git clone https://github.com/jciturras/xaringan-coes.git</code></pre>
 <pre class="git"><code>git add README.md
 git status 
 
-git commit -m &quot;Primer Commit&quot;</code></pre>
+git commit -m &quot;Nuestro Primer Commit&quot; </code></pre>
 <ul>
 <li>Push</li>
 </ul>
@@ -476,8 +482,17 @@ git commit -m &quot;Primer Commit&quot;</code></pre>
 <li>Pull</li>
 </ul>
 <pre class="git"><code>git pull</code></pre>
-<pre class="git"><code>  git config --global user.email &quot;jciturra@uc.cl&quot;
-  git config --global user.name &quot;jciturras&quot;</code></pre>
+<ul>
+<li>Branch</li>
+</ul>
+<pre class="git"><code>git branch # Para checkear en qué branch estamos
+           # la Branch &quot;vigente&quot; debería aparecer con un * 
+git branch branch01  # creamos una nueva Branch
+
+git checkout branch01 # Selecionamos la nueva Branch
+
+git branch # Chequeamos cuál es la Branch vigente
+</code></pre>
 </div>
 </div>
 <div id="servidores" class="section level1">
