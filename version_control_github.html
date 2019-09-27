@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Julio César Iturra Sanhueza - jciturra@uc.cl" />
@@ -252,48 +253,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -481,21 +443,31 @@ div.tocify {
 
 <div id="presentacion" class="section level1">
 <h1>Presentación</h1>
-<p>El presente documento tiene el objetivo de introducir a investigadores e investigadoras de las Ciencias Sociales al uso de herramientas para el control de versiones para la realización de investigación que permita cumplir con los estándares de <a href="osf.html"><strong>Reproducibilidad</strong>, <strong>Apertura</strong> y <strong>Transparencia</strong></a> <span class="citation">(Nosek et al., 2015)</span></p>
+<p>El presente documento tiene el objetivo de introducir a investigadores e investigadoras de las Ciencias Sociales al uso de herramientas para el control de versiones para la realización de investigación que permita cumplir con los estándares de <a href="osf.html"><strong>Reproducibilidad</strong>, <strong>Apertura</strong> y <strong>Transparencia</strong></a> <span class="citation">(Nosek et al., 2015)</span>.</p>
 <div id="git" class="section level2">
 <h2>Git</h2>
+<p>Git fue creado por Linus Torvald para realizar control de versiones en el desarrollo de Linux <span class="citation">(Loeliger &amp; McCullough, 2012)</span></p>
+</div>
+<div id="clone-push-commit-pull-branch-de-que-se-trata" class="section level2">
+<h2>Clone, Push, Commit, Pull, Branch: ¿de qué se trata?</h2>
+<ul>
+<li>Crear un Repositorio</li>
+</ul>
 <p><a href="Git">https://git-scm.com/</a></p>
 <ul>
 <li>Clone</li>
 </ul>
-<pre><code>cd C:\Users\JC\Desktop\example
+<pre class="git"><code>cd C:\Users\JC\Desktop\example
+ # Hay que dar vuelta los slash
+
 git clone https://github.com/jciturras/xaringan-coes.git</code></pre>
 <ul>
 <li>Commit</li>
 </ul>
-<pre class="git"><code>git add &lt;filename&gt;
-git add .
-git commit -m &quot;Commit message&quot;</code></pre>
+<pre class="git"><code>git add README.md
+git status 
+
+git commit -m &quot;Primer Commit&quot;</code></pre>
 <ul>
 <li>Push</li>
 </ul>
@@ -503,25 +475,28 @@ git commit -m &quot;Commit message&quot;</code></pre>
 <ul>
 <li>Pull</li>
 </ul>
-<pre><code>  git config --global user.email &quot;jciturra@uc.cl&quot;
+<pre class="git"><code>git pull</code></pre>
+<pre class="git"><code>  git config --global user.email &quot;jciturra@uc.cl&quot;
   git config --global user.name &quot;jciturras&quot;</code></pre>
-<div id="github" class="section level3">
-<h3>Github</h3>
 </div>
 </div>
+<div id="servidores" class="section level1">
+<h1>Servidores</h1>
 </div>
-<div id="editor" class="section level1">
-<h1>Editor</h1>
-<div id="atom" class="section level2">
-<h2>Atom</h2>
+<div id="editores" class="section level1">
+<h1>Editores</h1>
+<ul>
+<li><p>Atom</p></li>
+<li><p>RStudio</p></li>
+<li><p>GitHub Desktop</p></li>
+</ul>
 </div>
-<div id="rstudio" class="section level2">
-<h2>RStudio</h2>
-</div>
-</div>
-<div id="github-desktop" class="section level1 unnumbered">
-<h1>GitHub Desktop</h1>
+<div id="referencias" class="section level1 unnumbered">
+<h1>Referencias</h1>
 <div id="refs" class="references">
+<div id="ref-loeliger2012version">
+<p>Loeliger, J., &amp; McCullough, M. (2012). <em>Version control with git: Powerful tools and techniques for collaborative software development</em>. " O’Reilly Media, Inc.".</p>
+</div>
 <div id="ref-Nosek2015">
 <p>Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., … Yarkoni, T. (2015). Promoting an open research culture. <em>Science</em>, <em>348</em>(6242), 1422. <a href="https://doi.org/10.1126/science.aab2374">https://doi.org/10.1126/science.aab2374</a></p>
 </div>
@@ -546,6 +521,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
