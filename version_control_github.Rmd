@@ -15,9 +15,21 @@ output:
 
 # Presentación
 
-El presente documento tiene el objetivo de introducir a investigadores e investigadoras de las Ciencias Sociales al uso de herramientas para el control de versiones para la realización de investigación que permita cumplir con los estándares de [**Reproducibilidad**, **Apertura** y **Transparencia**](osf.html) [@Nosek2015] 
+El presente documento tiene el objetivo de introducir a investigadores e investigadoras de las Ciencias Sociales al uso de herramientas para el control de versiones para la realización de investigación que permita cumplir con los estándares de [**Reproducibilidad**, **Apertura** y **Transparencia**](osf.html) [@Nosek2015]. 
+
+
 
 ## Git
+
+Git fue creado por Linus Torvald para realizar control de versiones en el desarrollo de Linux  [@loeliger2012version]
+
+
+## Clone, Push, Commit, Pull, Branch: ¿de qué se trata?
+
+
+* Crear un Repositorio
+
+
 
 [https://git-scm.com/](Git)
 
@@ -25,16 +37,18 @@ El presente documento tiene el objetivo de introducir a investigadores e investi
 
 ```{git}
 cd C:\Users\JC\Desktop\example
+ # Hay que dar vuelta los slash
+
 git clone https://github.com/jciturras/xaringan-coes.git
 ```
-
 
 * Commit
 
 ```{git}
-git add <filename>
-git add .
-git commit -m "Commit message"
+git add README.md
+git status 
+
+git commit -m "Primer Commit"
 ```
 
 
@@ -47,18 +61,25 @@ git push origin master
 
 * Pull
 
+```{git}
+git pull
+```
+
 
 ```{git}
   git config --global user.email "jciturra@uc.cl"
   git config --global user.name "jciturras"
 ```
 
-### Github
+# Servidores
 
-# Editor 
+# Editores 
 
-## Atom
+* Atom
 
-## RStudio
+* RStudio
 
-# GitHub Desktop
+* GitHub Desktop
+
+
+# Referencias
