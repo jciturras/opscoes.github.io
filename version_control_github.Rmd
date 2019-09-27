@@ -78,7 +78,11 @@ git pull
 
 ```{git}
 git branch # Para checkear en qué branch estamos
+<<<<<<< HEAD
            # la Branch "vigente" debería aparecer con un * 
+=======
+           # la Bracnh "vigente" debería aparecer con un * 
+>>>>>>> ac22d48459adf9f969d754bc03a334dce077a404
 git branch branch01  # creamos una nueva Branch
 
 git checkout branch01 # Selecionamos la nueva Branch
