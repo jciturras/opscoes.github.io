@@ -27,17 +27,26 @@ Git fue creado por Linus Torvald para realizar control de versiones en el desarr
 ## Clone, Push, Commit, Pull, Branch: ¿de qué se trata?
 
 
-* Crear un Repositorio
+* Crear username
 
 
+```{git}
+git config --global user.email "jciturra@uc.cl"
+git config --global user.name "jciturras"
+```
+
+* Crear un repositorio
 
 [https://git-scm.com/](Git)
+
+
+* Trabajar con GitBash
 
 * Clone
 
 ```{git}
 cd C:\Users\JC\Desktop\example
- # Hay que dar vuelta los slash
+# Hay que dar vuelta los slash
 
 git clone https://github.com/jciturras/xaringan-coes.git
 ```
@@ -48,7 +57,7 @@ git clone https://github.com/jciturras/xaringan-coes.git
 git add README.md
 git status 
 
-git commit -m "Primer Commit"
+git commit -m "Nuestro Primer Commit" 
 ```
 
 
@@ -65,11 +74,20 @@ git push origin master
 git pull
 ```
 
+* Branch
 
 ```{git}
-  git config --global user.email "jciturra@uc.cl"
-  git config --global user.name "jciturras"
+git branch # Para checkear en qué branch estamos
+           # la Bracnh "vigente" debería aparecer con un * 
+git branch branch01  # creamos una nueva Branch
+
+git checkout branch01 # Selecionamos la nueva Branch
+
+git branch # Chequeamos cuál es la Branch vigente
+
+
 ```
+
 
 # Servidores
 
