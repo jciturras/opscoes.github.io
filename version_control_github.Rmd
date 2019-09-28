@@ -90,7 +90,7 @@ git branch branch01
 4. Seleccionamos la nueva branch que se llame **"branch01"**.
 
 ```{git}
-git checkout branch01 
+git checkout branch01  
 ```
 
 5. Chequeamos cuál es la branch vigente.
