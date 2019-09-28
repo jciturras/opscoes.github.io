@@ -1,6 +1,7 @@
 body{
   text-align: justify;  
   font-family: "Lato";
+  font-size: 16px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
@@ -16,12 +17,12 @@ pre {
     display: block;
     padding: 9.5px;
     margin: 0 0 10px;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 1.42857143;
     color: #333;
     word-break: break-all;
     word-wrap: break-word;
-    background-color: #81cd9e;
+    background-color: #81cd9e; /* Color del fondo del codigo*/
     border: 1px solid #ccc;
     border-radius: 4px;
 }

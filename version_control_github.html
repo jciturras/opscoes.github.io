@@ -25,27 +25,10 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <link rel="stylesheet" href="site_lib/academicons-1.8.6/css/academicons.css"/>
 
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
 
 
 
@@ -460,43 +443,48 @@ git config --global user.name &quot;jciturras&quot;</code></pre>
 </ul>
 <p><a href="Git">https://git-scm.com/</a></p>
 <ul>
-<li><p>Trabajar con GitBash</p></li>
-<li><p>Clone</p></li>
+<li>Trabajar con GitBash</li>
 </ul>
-<pre class="git"><code>cd C:\Users\JC\Desktop\example
+<div id="clone" class="section level3">
+<h3>Clone</h3>
+<pre class="git"><code>cd C:\Users\JC\Desktop\elrepo 
 # Hay que dar vuelta los slash
-
 git clone https://github.com/jciturras/xaringan-coes.git</code></pre>
-<ul>
-<li>Commit</li>
-</ul>
+</div>
+<div id="commit" class="section level3">
+<h3>Commit</h3>
 <pre class="git"><code>git add README.md
 git status 
-
 git commit -m &quot;Nuestro Primer Commit&quot; </code></pre>
-<ul>
-<li>Push</li>
-</ul>
+</div>
+<div id="push" class="section level3">
+<h3>Push</h3>
 <pre class="git"><code>git push origin master</code></pre>
-<ul>
-<li>Pull</li>
-</ul>
+</div>
+<div id="pull" class="section level3">
+<h3>Pull</h3>
 <pre class="git"><code>git pull</code></pre>
-<ul>
-<li>Branch</li>
-</ul>
-<pre class="git"><code>git branch # Para checkear en qué branch estamos
-<<<<<<< HEAD
-           # la Branch &quot;vigente&quot; debería aparecer con un * 
-=======
-           # la Bracnh &quot;vigente&quot; debería aparecer con un * 
->>>>>>> ac22d48459adf9f969d754bc03a334dce077a404
-git branch branch01  # creamos una nueva Branch
-
-git checkout branch01 # Selecionamos la nueva Branch
-
-git branch # Chequeamos cuál es la Branch vigente
-</code></pre>
+</div>
+<div id="branch" class="section level3">
+<h3>Branch</h3>
+<ol style="list-style-type: decimal">
+<li>Para checkear en qué branch estamos.</li>
+<li>La Branch “vigente” debería aparecer con un <code>*</code></li>
+</ol>
+<pre class="git"><code>git branch </code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Creamos una nueva branch.</li>
+</ol>
+<pre class="git"><code>git branch branch01  </code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Seleccionamos la nueva branch que se llame <strong>“branch01”</strong>.</li>
+</ol>
+<pre class="git"><code>git checkout branch01 </code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Chequeamos cuál es la branch vigente.</li>
+</ol>
+<pre class="git"><code>git branch </code></pre>
+</div>
 </div>
 </div>
 <div id="servidores" class="section level1">

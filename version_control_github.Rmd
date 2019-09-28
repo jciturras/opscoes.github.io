@@ -4,13 +4,14 @@ author: "Julio César Iturra Sanhueza - jciturra@uc.cl"
 bibliography: zlibrary.bib
 csl: apa6.csl
 output:
-  html_document:
-    css: "juitsa-theme.css"
-    toc: true
-    toc_float: 
-      collapsed: false
+  html_document: 
+    css: juitsa-theme.css
+    highlight: monochrome
     includes:
-        in_header: academicons.html      
+      in_header: academicons.html
+    toc: yes
+    toc_float:
+      collapsed: no
 ---
 
 # Presentación
@@ -42,50 +43,60 @@ git config --global user.name "jciturras"
 
 * Trabajar con GitBash
 
-* Clone
+### Clone
 
 ```{git}
-cd C:\Users\JC\Desktop\example
+cd C:\Users\JC\Desktop\elrepo 
 # Hay que dar vuelta los slash
-
 git clone https://github.com/jciturras/xaringan-coes.git
 ```
 
-* Commit
+### Commit
 
 ```{git}
 git add README.md
 git status 
-
 git commit -m "Nuestro Primer Commit" 
 ```
 
 
-* Push
+### Push
 
 ```{git}
 git push origin master
 ```
 
 
-* Pull
+### Pull
 
 ```{git}
 git pull
 ```
 
-* Branch
+### Branch
+
+1. Para checkear en qué branch estamos.
+2. La Branch "vigente" debería aparecer con un ``*``   
 
 ```{git}
-git branch # Para checkear en qué branch estamos
-           # la Branch "vigente" debería aparecer con un * 
-git branch branch01  # creamos una nueva Branch
+git branch 
+```
 
-git checkout branch01 # Selecionamos la nueva Branch
+3. Creamos una nueva branch.
+```{git}
+git branch branch01  
+```
 
-git branch # Chequeamos cuál es la Branch vigente
+4. Seleccionamos la nueva branch que se llame **"branch01"**.
 
+```{git}
+git checkout branch01 
+```
 
+5. Chequeamos cuál es la branch vigente.
+
+```{git}
+git branch 
 ```
 
 
