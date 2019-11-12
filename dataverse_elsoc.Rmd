@@ -2,13 +2,13 @@
 title: "Dataverse Estudio Social Longitudinal de Chile"
 output:
   html_document: 
-    css: "juitsa-theme.css"
     toc: true
     toc_float:
       collapsed: false
       smooth_scroll: true
 bibliography: zlibrary.bib
 csl: apa6.csl
+css: sty|e-opsc.css
 ---
 
 

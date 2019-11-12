@@ -4,9 +4,8 @@ bibliography: zlibrary.bib
 csl: apa6.csl
 output:
   html_document:
-    css: "juitsa-theme.css"
     toc: true
-    toc_float: 
+    toc_float:
       collapsed: false
     includes:
         in_header: academicons.html      
@@ -160,7 +159,7 @@ Como herramienta de colaboración, el OSF permite crear un flujo de trabajo para
 
 ### Gestión de un proyecto en OSF
 
-Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de [ELSOC](http://www.elsoc.cl/) [@ELSOC2016] .
+Este apartado está destinado a ilustrar las potencialidades del OSF como repositorio para un proyecto de Tesis de Magister. Se ha elegido un proyecto de autoría propia que ha empleado datos de la primera ola (año 2016) de [ELSOC](http://www.elsoc.cl/) [@ELSOC2016b] .
 
 <center>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#tesis"> Ejemplo  </button>
@@ -238,7 +237,7 @@ El [Dataverse Project](https://dataverse.org/) ofrece un **repositorio de datos 
   ![**Fig. 7**: ELSOC en Dataverse](images/dataverseelsoc.png){width=18em}
 </div>
 
-Desde el año 2018, el Centro de Estudios de Conflicto y Cohesión Social ha depositado dos bases de datos en [Dataverse](https://dataverse.harvard.edu/dataverse/coes_survey?q=&types=datasets&sort=dateSort&order=desc&page=1); la **Encuesta sobre Conflicto y Cohesion Social en Chile (2014)** [@ENACOES2014] y la primera ola del **Estudio Longitudinal Social de Chile (2016)** [@ELSOC2016]. Ambas bases de datos se encuentran disponibles para libre descarga y son citables a través de un **DOI**. La Tabla 2 ilustra los siete componentes principales de una referencia para fuente de datos en Dataverse.
+Desde el año 2018, el Centro de Estudios de Conflicto y Cohesión Social ha depositado dos bases de datos en [Dataverse](https://dataverse.harvard.edu/dataverse/coes_survey?q=&types=datasets&sort=dateSort&order=desc&page=1); la **Encuesta sobre Conflicto y Cohesion Social en Chile (2014)** [@ENACOES2014] y la primera ola del **Estudio Longitudinal Social de Chile (2016)** [@ELSOC2016b]. Ambas bases de datos se encuentran disponibles para libre descarga y son citables a través de un **DOI**. La Tabla 2 ilustra los siete componentes principales de una referencia para fuente de datos en Dataverse.
 
 <br>
 

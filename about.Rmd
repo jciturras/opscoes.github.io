@@ -1,6 +1,6 @@
 ---
 title: "Reseña"
-css: juitsa-theme.css
+css: sty|e-opsc.css
 ---
 Este sitio web fue elaborado por Julio César Iturra Sanhueza, asistente de la Línea de Interacciones Grupales e Individuales del Centro de Estudios de Conflicto y Cohesión Social (COES)
 

@@ -1,18 +1,19 @@
 ---
 title: "Reproducibilidad y Control de Versiones para las Ciencias Sociales"
-author: "Julio César Iturra Sanhueza - jciturra@uc.cl"
 bibliography: zlibrary.bib
 csl: apa6.csl
 output:
   html_document: 
-    css: juitsa-theme.css
     highlight: monochrome
     includes:
       in_header: academicons.html
     toc: yes
     toc_float:
       collapsed: no
+css: sty|e-opsc.css      
 ---
+
+<div style="text-align: right"> **Julio César Iturra Sanhueza** </div>
 
 # Presentación
 
@@ -22,10 +23,10 @@ El presente documento tiene el objetivo de introducir a investigadores e investi
 
 ## Git
 
-Git fue creado por Linus Torvald para realizar control de versiones en el desarrollo de Linux  [@loeliger2012version]
+Git fue creado por Linus Torvald para realizar control de versiones en el desarrollo de Linux  [@loeliger2012version].
 
 
-## Clone, Push, Commit, Pull, Branch: ¿de qué se trata?
+## Clone, Push, Commit, Pull, Branch: ¿de qué se trata?.
 
 
 * Crear username
@@ -46,7 +47,10 @@ git config --global user.name "jciturras"
 ### Clone
 
 ```{git}
-cd C:\Users\JC\Desktop\elrepo 
+cd C:\Users\JC\Desktop\git-julio # desde acá...
+cd C:/Users/JC/Desktop/git-julio # a esto...
+cd C:/Users/JC/Desktop/git-julio/xaringan-coes
+
 # Hay que dar vuelta los slash
 git clone https://github.com/jciturras/xaringan-coes.git
 ```
@@ -57,6 +61,18 @@ git clone https://github.com/jciturras/xaringan-coes.git
 git add README.md
 git status 
 git commit -m "Nuestro Primer Commit" 
+```
+
+Ahora, si deseamos ver el mensaje de nuestro último commit para identificar su "hash" (id):
+
+```{git}
+git log
+```
+
+
+En el caso de que queramos deshacer el último commit:
+```{git}
+git reset --hard 00111112222333aaaabbbbbccccddd222
 ```
 
 
@@ -83,6 +99,7 @@ git branch
 ```
 
 3. Creamos una nueva branch.
+
 ```{git}
 git branch branch01  
 ```

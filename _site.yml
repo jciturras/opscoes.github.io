@@ -16,9 +16,6 @@ navbar:
       href: dataverse_elsoc.html
     - text: "Código"
       menu:  
-        - text: " "
-          icon: ai-researcherid
-          href: instalacion_R.html
         - text: "Control de Versiones"
           icon: fa-github 
           href: version_control_github.html  
@@ -34,8 +31,8 @@ output:
   html_document:
     includes:
         in_header: academicons.html
-    include: ["juitsa-theme.css"]
-    css: juitsa-theme.css
+    include: ["style-opsc.css"]
+    css: style-opsc.css
 
  
 

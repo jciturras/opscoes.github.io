@@ -10,7 +10,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Julio César Iturra Sanhueza - jciturra@uc.cl" />
 
 
 <title>Reproducibilidad y Control de Versiones para las Ciencias Sociales</title>
@@ -59,7 +58,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="juitsa-theme.css" type="text/css" />
+<link rel="stylesheet" href="style-opsc.css" type="text/css" />
 
 
 
@@ -371,13 +370,6 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="instalacion_R.html">
-        <span class="ai ai-researcherid"></span>
-         
-         
-      </a>
-    </li>
-    <li>
       <a href="version_control_github.html">
         <span class="fa fa-github"></span>
          
@@ -419,20 +411,22 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Reproducibilidad y Control de Versiones para las Ciencias Sociales</h1>
-<h4 class="author">Julio César Iturra Sanhueza - <a href="mailto:jciturra@uc.cl" class="email">jciturra@uc.cl</a></h4>
 
 </div>
 
 
+<div style="text-align: right">
+<strong>Julio César Iturra Sanhueza</strong>
+</div>
 <div id="presentacion" class="section level1">
 <h1>Presentación</h1>
 <p>El presente documento tiene el objetivo de introducir a investigadores e investigadoras de las Ciencias Sociales al uso de herramientas para el control de versiones para la realización de investigación que permita cumplir con los estándares de <a href="osf.html"><strong>Reproducibilidad</strong>, <strong>Apertura</strong> y <strong>Transparencia</strong></a> <span class="citation">(Nosek et al., 2015)</span>.</p>
 <div id="git" class="section level2">
 <h2>Git</h2>
-<p>Git fue creado por Linus Torvald para realizar control de versiones en el desarrollo de Linux <span class="citation">(Loeliger &amp; McCullough, 2012)</span></p>
+<p>Git fue creado por Linus Torvald para realizar control de versiones en el desarrollo de Linux <span class="citation">(Loeliger, 2009)</span>.</p>
 </div>
-<div id="clone-push-commit-pull-branch-de-que-se-trata" class="section level2">
-<h2>Clone, Push, Commit, Pull, Branch: ¿de qué se trata?</h2>
+<div id="clone-push-commit-pull-branch-de-que-se-trata." class="section level2">
+<h2>Clone, Push, Commit, Pull, Branch: ¿de qué se trata?.</h2>
 <ul>
 <li>Crear username</li>
 </ul>
@@ -447,7 +441,10 @@ git config --global user.name &quot;jciturras&quot;</code></pre>
 </ul>
 <div id="clone" class="section level3">
 <h3>Clone</h3>
-<pre class="git"><code>cd C:\Users\JC\Desktop\elrepo 
+<pre class="git"><code>cd C:\Users\JC\Desktop\git-julio # desde acá...
+cd C:/Users/JC/Desktop/git-julio # a esto...
+cd C:/Users/JC/Desktop/git-julio/xaringan-coes
+
 # Hay que dar vuelta los slash
 git clone https://github.com/jciturras/xaringan-coes.git</code></pre>
 </div>
@@ -456,6 +453,10 @@ git clone https://github.com/jciturras/xaringan-coes.git</code></pre>
 <pre class="git"><code>git add README.md
 git status 
 git commit -m &quot;Nuestro Primer Commit&quot; </code></pre>
+<p>Ahora, si deseamos ver el mensaje de nuestro último commit para identificar su “hash” (id):</p>
+<pre class="git"><code>git log</code></pre>
+<p>En el caso de que queramos deshacer el último commit:</p>
+<pre class="git"><code>git reset --hard 00111112222333aaaabbbbbccccddd222</code></pre>
 </div>
 <div id="push" class="section level3">
 <h3>Push</h3>
@@ -502,7 +503,7 @@ git commit -m &quot;Nuestro Primer Commit&quot; </code></pre>
 <h1>Referencias</h1>
 <div id="refs" class="references">
 <div id="ref-loeliger2012version">
-<p>Loeliger, J., &amp; McCullough, M. (2012). <em>Version control with git: Powerful tools and techniques for collaborative software development</em>. " O’Reilly Media, Inc.".</p>
+<p>Loeliger, J. (2009). <em>Version control with Git</em> (1st ed). Beijing ; Sebastopol, CA: O’Reilly.</p>
 </div>
 <div id="ref-Nosek2015">
 <p>Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., … Yarkoni, T. (2015). Promoting an open research culture. <em>Science</em>, <em>348</em>(6242), 1422. <a href="https://doi.org/10.1126/science.aab2374">https://doi.org/10.1126/science.aab2374</a></p>

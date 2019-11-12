@@ -1,11 +1,12 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
 body{
   text-align: justify;  
   font-family: "Lato";
   font-size: 16px;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
-
 
 pre:not([class]) {
     background-color: #dff0d8; /* Color del fondo del codigo*/ 
